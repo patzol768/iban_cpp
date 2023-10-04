@@ -1,0 +1,52 @@
+# object files
+*.o
+
+# binaries
+*.so
+idserver
+rest_resource
+
+# databases
+*.sqlite
+
+# logs
+*.log
+
+# anything which is generated
+*.gen
+generated
+/src_generated
+
+# build number (would be annoying)
+build-number.txt
+
+# tests (at least until real tests are not created)
+test/*
+
+# GitEye specific
+/.project
+
+# backups, temporaries, etc.
+/backup
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+~.*
+
+# anything cmake could recreate
+/CMakeFiles
+/build
+
+# sample certificates
+*.cer
+*.der
+*.pem
+*.csr
+
+# no binary libraries
+/dep_lib
+/ossl_provider_libs
+
+# others

@@ -1,0 +1,4 @@
+*.cer binary
+*.der binary
+*.p12 binary
+*.pfx binary
