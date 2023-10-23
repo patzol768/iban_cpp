@@ -25,7 +25,7 @@ class Bic
     Bic(std::string const& bic, bool allow_invalid = false);
 
     // Create a BIC from a country and a bankcode. Bic("DE", "43060967")
-    Bic(std::string const& country, std::string const& bankcode, bool allow_multiple = false);
+    Bic(std::string const& country, std::string const& bankcode, bool allow_multiple);
 
     // Equality, where short code also equals long code with "XXX" branch code
     bool operator==(Bic const& other) const;
@@ -120,22 +120,23 @@ class Bic_repository_entry
     ~Bic_repository_entry() = default;
     Bic_repository_entry(const Bic_repository_entry&) = delete;                  // copy constructor
     Bic_repository_entry& operator=(const Bic_repository_entry& other) = delete; // assignment operator
-    Bic_repository_entry(Bic_repository_entry&& other) = delete;                 // move constructor
-    Bic_repository_entry& operator=(Bic_repository_entry&& other) = delete;      // move assignment operator
+    Bic_repository_entry(Bic_repository_entry&& other) = default;                // move constructor
+    Bic_repository_entry& operator=(Bic_repository_entry&& other) = default;     // move assignment operator
 
-    std::string country_code; // "BG",
-    std::string bank_code;    // "IORT",
-    std::string short_name;   // "INVESTBANK AD",
-    std::string name;         // "INVESTBANK AD",
-    std::string bic;          // "IORTBGSF",
-    bool primary;             // true
+    std::string country_code;                 // "BG",
+    std::string bank_code;                    // "IORT",
+    std::string short_name;                   // "INVESTBANK AD",
+    std::string name;                         // "INVESTBANK AD",
+    std::string bic;                          // "IORTBGSF",
+    bool primary;                             // true
+    std::optional<std::string> checksum_algo; // "09"
+    std::optional<std::string> address;       // "branch address"
 };
 
 // Manages the current list of bank information.
 class Bic_repository
 {
     public:
-    Bic_repository();
     ~Bic_repository() { }
 
     static Bic_repository* get_instance();
@@ -153,9 +154,10 @@ class Bic_repository
 
     // Loads the current set of BIC codes. The "no branch" codes must have "XXX" branch code added.
     // TODO: allow multi threading (loader + getter race)
-    void load(std::function<void(std::vector<Bic_repository_entry> const&)> loader);
+    void load(std::function<void(std::vector<Bic_repository_entry>&)> loader);
 
     private:
+    Bic_repository();
     Bic_repository(const Bic_repository&) = delete;                  // copy constructor
     Bic_repository& operator=(const Bic_repository& other) = delete; // assignment operator
     Bic_repository(Bic_repository&& other) = delete;                 // move constructor

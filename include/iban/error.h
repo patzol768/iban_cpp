@@ -5,10 +5,10 @@
 namespace iban
 {
 
-class IbanError : public std::logic_error
+class Iban_error : public std::logic_error
 {
     public:
-    IbanError(std::string error)
+    Iban_error(std::string error)
     : std::logic_error(error) {};
 };
 

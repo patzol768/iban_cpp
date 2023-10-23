@@ -1,0 +1,43 @@
+{
+  "CZ": {
+    "positions": {
+      "account_code": [10, 20],
+      "bank_code": [0, 4],
+      "branch_code": [4, 10]
+    }
+  },
+  "FR": {
+    "positions": {
+      "account_code": [10, 21],
+      "bank_code": [0, 5],
+      "branch_code": [5, 10]
+    }
+  },
+  "JO": {
+    "positions": {
+      "account_code": [8, 26],
+      "bank_code": [0,4],
+      "branch_code": [4,8]
+    }
+  },
+  "SN": {
+    "bban_spec": "2!a22!n",
+    "iban_spec": "SN2!n2!a22!n",
+    "bban_length": 24,
+    "iban_length": 28,
+    "positions": {
+      "account_code": [
+        0,
+        24
+      ],
+      "bank_code": [
+        0,
+        0
+      ],
+      "branch_code": [
+        0,
+        0
+      ]
+    }
+  }
+}

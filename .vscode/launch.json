@@ -13,7 +13,12 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "LOG4CPLUS_CONFIG",
+                    "value": "${workspaceFolder}/log.ini"
+                }
+            ],
             "preLaunchTask": "",
             "externalConsole": false,
             "MIMode": "gdb",

@@ -4,9 +4,10 @@
 
 #include <map>
 #include <regex>
+#include <iostream>
 
 using iban::Bic_repository;
-using iban::IbanError;
+using iban::Iban_error;
 using std::map;
 using std::reference_wrapper;
 using std::regex;
@@ -15,6 +16,7 @@ using std::regex_replace;
 using std::set;
 using std::string;
 using std::unique_ptr;
+using std::vector;
 
 namespace iban
 {
@@ -31,7 +33,7 @@ Bic::Bic(std::string const& bic, bool allow_invalid)
 
     if (!allow_invalid && !is_valid())
     {
-        throw IbanError("invalid");
+        throw Iban_error("invalid");
     }
 }
 
@@ -41,12 +43,12 @@ Bic::Bic(std::string const& country, std::string const& bankcode, bool allow_mul
 
     if (!bic_list.size())
     {
-        throw IbanError("not found");
+        throw Iban_error("not found");
     }
 
     if (!allow_multiple && bic_list.size() > 1)
     {
-        throw IbanError("ambiguous");
+        throw Iban_error("ambiguous");
     }
 
     *this = *bic_list.begin();
@@ -76,8 +78,6 @@ Bic::operator std::string() const
 {
     return (!m_is_short) ? m_code : m_code.substr(0, 8);
 }
-
-std::basic_ostream<char, std::char_traits<char>>& operator<<(std::basic_ostream<char, std::char_traits<char>>& lhs, Bic const& rhs);
 
 std::set<Bic> Bic::from_bank_code(std::string const& country, std::string const& bankcode)
 {
@@ -112,7 +112,7 @@ bool Bic::is_valid_length() const
 bool Bic::is_valid_structure() const
 {
     // Always 11 chars
-    static const regex re_bic("[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}[A-Z0-9]{3}");
+    static const regex re_bic("^[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}[A-Z0-9]{3}$");
 
     return regex_match(m_code, re_bic);
 }
@@ -267,7 +267,7 @@ std::optional<std::string> Bic::get_branch_code() const
 
 std::optional<std::string> Bic::get_part(size_t from, size_t len) const
 {
-    if (from < 0 || len < 1 || m_code.size() >= from + len)
+    if (from < 0 || len < 1 || m_code.size() < from + len)
     {
         return {};
     }
@@ -278,7 +278,7 @@ std::optional<std::string> Bic::get_part(size_t from, size_t len) const
 std::string Bic::trim(std::string const& str)
 {
     // removes all whitespaces
-    auto result = regex_replace(str, std::regex("\\s"), "");
+    auto result = regex_replace(str, regex("\\s"), "");
 
     // make all uppercase
     transform(result.begin(), result.end(), result.begin(), ::toupper);
@@ -357,16 +357,18 @@ std::vector<reference_wrapper<Bic_repository_entry const>> Bic_repository::get_b
     return result;
 }
 
-void Bic_repository::load(std::function<void(std::vector<Bic_repository_entry> const&)> loader)
+void Bic_repository::load(std::function<void(std::vector<Bic_repository_entry>&)> loader)
 {
-    std::vector<Bic_repository_entry> elements;
+    vector<Bic_repository_entry> elements;
     loader(elements);
+
+    swap(elements, m_elements);
 
     m_by_bic.clear();
     m_by_code.clear();
     m_by_short_bic.clear();
 
-    for (auto const& element : elements)
+    for (auto const& element : m_elements)
     {
         auto size = element.bic.size();
         if (size != 8 && size != 11)
@@ -383,13 +385,5 @@ void Bic_repository::load(std::function<void(std::vector<Bic_repository_entry> c
         m_by_code.insert({bank_code, &element});
     }
 }
-
-
-// setters
-
-// Loads the current set of BIC codes. The "no branch" codes must have "XXX" branch code added.
-// TODO: allow multi threading (loader + getter race)
-void load(std::function<void(std::vector<Bic_repository_entry> const&)> loader);
-
 
 } // namespace iban

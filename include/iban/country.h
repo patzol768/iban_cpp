@@ -26,7 +26,6 @@ class Country
 class Country_repository
 {
     public:
-    Country_repository();
     ~Country_repository() { }
 
     static Country_repository* get_instance();
@@ -52,6 +51,7 @@ class Country_repository
     void load(std::function<void(std::map<std::string, Country> const&)> loader);
 
     private:
+    Country_repository();
     Country_repository(const Country_repository&) = delete;                  // copy constructor
     Country_repository& operator=(const Country_repository& other) = delete; // assignment operator
     Country_repository(Country_repository&& other) = delete;                 // move constructor
