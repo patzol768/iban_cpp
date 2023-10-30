@@ -26,8 +26,9 @@ namespace iban
 
 // removes non-iban allowed chars, the rest shall contain on IBAN conform chars
 Iban::Iban(std::string const& iban, bool allow_invalid, bool validate_bban)
+: m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(iban.substr(0, 2)))
 {
-    // no ::toupper conversion, sinca IBAN standard defines the use of capital letters
+    // no ::toupper conversion, since IBAN standard defines the use of capital letters
 
     // remove any separators and not allowed chars
     m_iban = regex_replace(iban, regex("[^0-9A-Z]"), "");
@@ -45,15 +46,13 @@ Iban::Iban(std::string const& iban, bool allow_invalid, bool validate_bban)
 
 // allows small letters in bban, but would later translate to IBAN conform capital letters
 Iban::Iban(std::string const& country_code, std::string const& bban, bool validate_bban)
+: m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(country_code))
 {
-    // remove any separators and not allowed chars
-    auto temp_bban = regex_replace(bban, regex("[^0-9A-Za-z]"), "");
+    std::string temp_bban;
+    transform(bban.begin(), bban.end(), std::back_inserter(temp_bban), ::toupper);
 
-    std::string trimmed_bban;
-    transform(temp_bban.begin(), temp_bban.end(), std::back_inserter(trimmed_bban), ::toupper);
-
-    auto validator = BBan_handler_factory::get_instance()->get_by_country(country_code);
-    auto formatted_bban = (validator) ? validator->preformat(temp_bban) : temp_bban;
+    auto handler = BBan_handler_factory::get_instance()->get_by_country(country_code);
+    auto formatted_bban = (handler) ? handler->preformat(temp_bban) : temp_bban;
 
     string check = iban_checksum(country_code, formatted_bban);
 
@@ -67,35 +66,33 @@ Iban::Iban(std::string const& country_code, std::string const& bban, bool valida
 
 // not allows separators in any of the inputs
 Iban::Iban(std::string const& country_code, std::string const& bank_code, std::string const& branch_code, std::string const& account_code, bool validate_bban)
+: m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(country_code))
 {
-    // throws if country_code invalid
-    auto& iban_structure = Iban_structure_repository::get_instance()->get_by_country(country_code);
-
-    if (bank_code.size() != iban_structure.bank_code.second - iban_structure.bank_code.first)
+    if (bank_code.size() != m_iban_structure.bank_code.second - m_iban_structure.bank_code.first)
     {
         throw Iban_error("invalid bank code size");
     }
 
-    if (account_code.size() != iban_structure.account_code.second - iban_structure.account_code.first)
+    if (account_code.size() != m_iban_structure.account_code.second - m_iban_structure.account_code.first)
     {
         throw Iban_error("invalid account code size");
     }
 
-    if (branch_code.size() != iban_structure.branch_code.second - iban_structure.branch_code.first)
+    if (branch_code.size() != m_iban_structure.branch_code.second - m_iban_structure.branch_code.first)
     {
         throw Iban_error("invalid branch code size");
     }
 
-    string bban(iban_structure.bban_length, '0');
-    bban.replace(iban_structure.bank_code.first, bank_code.size(), bank_code);
-    bban.replace(iban_structure.account_code.first, account_code.size(), account_code);
-    bban.replace(iban_structure.branch_code.first, branch_code.size(), branch_code);
+    string bban(m_iban_structure.bban_length, '0');
+    bban.replace(m_iban_structure.bank_code.first, bank_code.size(), bank_code);
+    bban.replace(m_iban_structure.account_code.first, account_code.size(), account_code);
+    bban.replace(m_iban_structure.branch_code.first, branch_code.size(), branch_code);
 
     std::string trimmed_bban;
     transform(bban.begin(), bban.end(), std::back_inserter(trimmed_bban), ::toupper);
 
-    auto validator = BBan_handler_factory::get_instance()->get_by_country(country_code);
-    auto formatted_bban = (validator) ? validator->preformat(bban) : bban;
+    auto handler = BBan_handler_factory::get_instance()->get_by_country(country_code);
+    auto formatted_bban = (handler) ? handler->preformat(bban) : bban;
 
     string check = iban_checksum(country_code, formatted_bban);
 
@@ -146,12 +143,12 @@ bool Iban::is_valid_iban_checksum() const
 
 bool Iban::is_valid_bban() const
 {
-    auto validator = BBan_handler_factory::get_instance()->get_by_country(get_country_code());
+    auto handler = BBan_handler_factory::get_instance()->get_by_country(get_country_code());
 
-    if (validator)
+    if (handler)
     {
-        // have country specific validator
-        return validator->is_valid(get_bban());
+        // have country specific handler
+        return handler->is_valid(get_bban());
     }
 
     // check lengths as registered in IBAN spec - not much, but cannot do more
@@ -163,6 +160,26 @@ bool Iban::is_valid_bban() const
 std::string Iban::get_country_code() const
 {
     return m_iban.substr(0, 2);
+}
+
+std::string Iban::get_iban_checksum() const
+{
+    return m_iban.substr(2, 2);
+}
+
+std::string Iban::get_bankcode() const
+{
+    return m_iban.substr(m_iban_structure.bank_code.first, m_iban_structure.bank_code.second - m_iban_structure.bank_code.first);
+}
+
+std::string Iban::get_branchcode() const
+{
+    return m_iban.substr(m_iban_structure.branch_code.first, m_iban_structure.branch_code.second - m_iban_structure.branch_code.first);
+}
+
+std::string Iban::get_account() const
+{
+    return m_iban.substr(m_iban_structure.account_code.first, m_iban_structure.account_code.second - m_iban_structure.account_code.first);
 }
 
 std::string Iban::get_bban() const
@@ -235,6 +252,7 @@ std::string Iban::iban_checksum(std::string const& country_code, std::string con
 }
 
 // add a singe space after every 4th character
+// TODO: better algorithm?
 std::basic_ostream<char, std::char_traits<char>>& operator<<(std::basic_ostream<char, std::char_traits<char>>& lhs, Iban const& rhs)
 {
     string formatted;
@@ -282,6 +300,10 @@ void Iban_structure_entry::override(Iban_structure_entry const& v)
 
 // ==========================================================================
 
+const Iban_structure_entry empty_structure = {"", "", 0, 0, {0, 0}, {0, 0}, {0, 0}, false};
+
+// ==========================================================================
+
 map<string, Iban_structure_entry> Iban_structure_repository::m_elements = {};
 
 Iban_structure_repository::Iban_structure_repository()
@@ -299,7 +321,7 @@ Iban_structure_entry const& Iban_structure_repository::get_by_country(std::strin
     auto it = m_elements.find(country_code);
     if (it == m_elements.end())
     {
-        throw Iban_error("no iban structure for country");
+        return empty_structure;
     }
 
     return it->second;

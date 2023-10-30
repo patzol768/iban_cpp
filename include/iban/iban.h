@@ -9,6 +9,7 @@
 
 namespace iban
 {
+class Iban_structure_entry;
 
 class Iban
 {
@@ -43,6 +44,18 @@ class Iban
     // Returns the country code from the IBAN
     std::string get_country_code() const;
 
+    // Returns the IBAN checksum
+    std::string get_iban_checksum() const;
+
+    // Returns the national bank code
+    std::string get_bankcode() const;
+
+    // Returns the national branch code (emtpy if no branch info)
+    std::string get_branchcode() const;
+
+    // Returns the account identifier inside the bank+branch
+    std::string get_account() const;
+
     // Returns the BBAN from the IBAN
     std::string get_bban() const;
 
@@ -61,6 +74,7 @@ class Iban
     std::string iban_checksum(std::string const& country_code, std::string const& bban) const;
 
     std::string m_iban;
+    const Iban_structure_entry& m_iban_structure;
 
     friend std::basic_ostream<char, std::char_traits<char>>& operator<<(std::basic_ostream<char, std::char_traits<char>>& lhs, Iban const& rhs);
 };

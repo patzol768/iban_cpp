@@ -1,6 +1,10 @@
-#include "iban/countries/hungary.h"
+#include "iban/countries/HU.h"
 #include "iban/bic.h"
 
+#include <regex>
+
+using std::regex;
+using std::regex_replace;
 using std::string;
 
 namespace iban
@@ -8,21 +12,9 @@ namespace iban
 namespace countries
 {
 
-const std::string BBan_handler_HU::m_country = "HU";
-
-std::string const& BBan_handler_HU::get_country() const
+BBan_handler_HU::BBan_handler_HU(std::string const& country)
+:BBan_handler(country)
 {
-    return m_country;
-}
-
-bool BBan_handler_HU::is_valid(std::string const& bban) const
-{
-    return is_valid_checksum(bban) && is_valid_bankcode(bban) && is_valid_ext(bban);
-}
-
-bool BBan_handler_HU::is_valid_length(std::string const& bban) const
-{
-    return bban.size() == 16 || bban.size() == 24;
 }
 
 bool BBan_handler_HU::is_valid_checksum(std::string const& bban) const
@@ -58,7 +50,7 @@ bool BBan_handler_HU::is_valid_bankcode(std::string const& bban) const
     // bank + branch + check digit
     auto bankcode = bban.substr(0, 8);
 
-    auto bank = Bic_repository::get_instance()->get_by_country_bankcode("HU", bankcode);
+    auto bank = Bic_repository::get_instance()->get_by_country_bankcode(m_country, bankcode);
 
     return bank.size() != 0;
 }
@@ -70,7 +62,21 @@ __attribute__((weak)) bool BBan_handler_HU::is_valid_ext(std::string const& bban
 
 std::string BBan_handler_HU::preformat(std::string const& bban) const
 {
-    return (bban.size() == 16) ? bban + "00000000" : bban;
+    // remove any separators and not allowed chars
+    auto temp_bban = regex_replace(bban, regex("[^0-9]"), "");
+
+    switch(temp_bban.size())
+    {
+        case 16:
+            return temp_bban + "00000000";
+
+        case 24:
+            return temp_bban;
+
+        default:;
+    }
+
+    return "";
 }
 
 std::string BBan_handler_HU::trim(std::string const& bban) const

@@ -28,6 +28,7 @@ test/*
 
 # backups, temporaries, etc.
 /backup
+/tmp
 *.bak
 *.old
 *.orig

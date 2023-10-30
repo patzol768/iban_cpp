@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common.h"
+#include "iban.h"
 
 #include <map>
 #include <memory>
@@ -12,19 +13,21 @@ namespace iban
 class BBan_handler
 {
     public:
-    // Returns the coutry code
-    virtual std::string const& get_country() const = 0;
+    BBan_handler(std::string const& country);
 
-    // Validate the structural identity of the BBAN
+    // Returns the coutry code
+    virtual std::string const& get_country() const final;
+
+    // Validate the structural integrity of the BBAN
     virtual bool is_valid(std::string const& bban) const;
 
-    // Validate if the BBAN's length is valid
+    // Validate if the BBAN's length is valid. Note that bban must be preformatted for IBAN.
     virtual bool is_valid_length(std::string const& bban) const;
 
     // Validate the checksum(s) inside the BBAN
     virtual bool is_valid_checksum(std::string const& bban) const;
 
-    // Validate the bankcode (if present in the BBAN)
+    // Validate the bankcode and possibly branch code
     virtual bool is_valid_bankcode(std::string const& bban) const;
 
     // Validate the bban with an externally provided validator (e.g. bank specific check)
@@ -62,6 +65,18 @@ class BBan_handler
 
     // Runs the country specific formatting (returns unchanged if no country specific function exist)
     static std::string format(std::string const& country, std::string const& bban);
+
+    // Divides BBAN into its parts and returns in a map
+    // Elements:
+    //   - bank
+    //   - branch
+    //   - account
+    //   - nationalchecksum
+    static std::map<std::string, std::string> explode(std::string const& country, std::string const& bban); // TODO
+
+    protected:
+    const std::string m_country;
+    const Iban_structure_entry& m_iban_structure;
 };
 
 class BBan_handler_factory
@@ -73,14 +88,14 @@ class BBan_handler_factory
 
     // getters
 
-    // Looks for a country specific validator class instance
+    // Looks for a country specific handler class instance
     // nullptr if not found
     std::shared_ptr<BBan_handler> get_by_country(std::string const& country_code) const;
 
     // setters
 
-    // Registers a country specific validator
-    void register_validator(std::string const& country, std::shared_ptr<BBan_handler> validator);
+    // Registers a country specific handler
+    void register_handler(std::string const& country, std::shared_ptr<BBan_handler> handler);
 
     private:
     BBan_handler_factory();
@@ -89,7 +104,7 @@ class BBan_handler_factory
     BBan_handler_factory(BBan_handler_factory&& other) = delete;                 // move constructor
     BBan_handler_factory& operator=(BBan_handler_factory&& other) = delete;      // move assignment operator
 
-    static std::map<std::string, std::shared_ptr<BBan_handler>> m_validators;
+    static std::map<std::string, std::shared_ptr<BBan_handler>> m_handlers;
 };
 
 } // namespace iban

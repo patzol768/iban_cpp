@@ -83,7 +83,7 @@ message( STATUS "nlohmann::json include: ${JSON_INCLUDE}")
 ##
 ## all *.cpp in 'source', except the 'generated'
 ##
-file ( GLOB_RECURSE SOURCE_FILES "${SOURCE_DIR}/*.cpp" )
+file ( GLOB_RECURSE SOURCE_FILES "${SOURCE_DIR}/iban/*.cpp" )
 
 message( STATUS "Sources in: ${SOURCE_DIR}")
 
