@@ -5,7 +5,7 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ */
 
 #include "iban/countries/HU.h"
 #include "iban/bic.h"
@@ -22,7 +22,7 @@ namespace countries
 {
 
 BBan_handler_HU::BBan_handler_HU(std::string const& country)
-:BBan_handler(country)
+: BBan_handler(country)
 {
 }
 
@@ -74,7 +74,7 @@ std::string BBan_handler_HU::preformat(std::string const& bban) const
     // remove any separators and not allowed chars
     auto temp_bban = regex_replace(bban, regex("[^0-9]"), "");
 
-    switch(temp_bban.size())
+    switch (temp_bban.size())
     {
         case 16:
             return temp_bban + "00000000";
@@ -82,7 +82,8 @@ std::string BBan_handler_HU::preformat(std::string const& bban) const
         case 24:
             return temp_bban;
 
-        default:;
+        default:
+            break;
     }
 
     return "";

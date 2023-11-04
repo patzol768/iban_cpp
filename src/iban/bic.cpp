@@ -5,15 +5,15 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ */
 
 #include "iban/bic.h"
 #include "iban/country.h"
 #include "iban/error.h"
 
+#include <iostream>
 #include <map>
 #include <regex>
-#include <iostream>
 
 using iban::Bic_repository;
 using iban::Iban_error;
@@ -226,7 +226,8 @@ Bic_type Bic::get_type() const
         case '2':
             return Bic_type::REVERSE_BILLING;
 
-        default:;
+        default:
+            break;
     }
 
     return Bic_type::DEFAULT;
