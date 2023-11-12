@@ -206,5 +206,13 @@
     "name": "Wells Fargo Bank International Unlimited Company",
     "short_name": "Wells Fargo Bank International Unlimited Company",
     "primary": true
+  },
+  {
+    "country_code": "IE",
+    "bic": "DABAIE2DXXX",
+    "bank_code": "DABA",
+    "name": "Danske Bank A/S T/A Danske Bank",
+    "short_name": "Danske Bank",
+    "primary": true
   }
 ]

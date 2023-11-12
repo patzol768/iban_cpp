@@ -238,5 +238,37 @@
         "name": "UBS SWITZERLAND AG",
         "short_name": "UBS SWITZERLAND AG",
         "primary": true
+    },
+    {
+        "country_code": "CH",
+        "bic": "UBSWCHZH80A",
+        "bank_code": "00279",
+        "name": "UBS Switzerland AG",
+        "short_name": "UBS Switzerland AG",
+        "primary": true
+    },
+    {
+        "country_code": "CH",
+        "bic": "LOCYCHGG",
+        "bank_code": "08760",
+        "name": "BANQUE LOMBARD ODIER ET CIE SA",
+        "short_name": "BANQUE LOMBARD ODIER ET CIE SA",
+        "primary": true
+    },
+    {
+        "country_code": "CH",
+        "bic": "LOCYCHGG",
+        "bank_code": "00227",
+        "name": "UBS Switzerland AG",
+        "short_name": "UBS Switzerland AG",
+        "primary": true
+    },
+    {
+        "country_code": "CH",
+        "bic": "ABSOCH22",
+        "bank_code": "08390",
+        "name": "ALTERNATIVE BANK SCHWEIZ AG",
+        "short_name": "ALTERNATIVE BANK SCHWEIZ AG",
+        "primary": true
     }
 ]

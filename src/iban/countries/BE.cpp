@@ -5,7 +5,9 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ *
+ * Original code: https://github.com/mdomke/schwifty/schwifty/checksum/belgium.py
+ */
 
 #include "iban/countries/BE.h"
 #include "iban/bic.h"
@@ -42,6 +44,10 @@ bool BBan_handler_BE::is_valid_checksum(std::string const& bban) const
     // signed 64 bit integer has 19 digits, here we have only 10
     int64_t account_numeric = stoll(account);
     int64_t remainder = account_numeric % 97LL;
+    if (remainder == 0LL)
+    {
+        remainder = 97LL; // according to "ECBS TR 201V3.23"
+    }
     int64_t checksum_numeric = stoll(checksum);
 
     return remainder == checksum_numeric;
@@ -57,7 +63,6 @@ std::string BBan_handler_BE::preformat(std::string const& bban) const
     const regex trim("\\s");
     const regex numeric("^.*([0-9]{12}).*$");
     const regex formatted("^[^0-9]*([0-9]{3})-([0-9]{1,7})-([0-9]{2}).*$");
-    const string padding("0000000");
 
     auto trimmed_bban = regex_replace(bban, trim, "");
 
@@ -71,7 +76,7 @@ std::string BBan_handler_BE::preformat(std::string const& bban) const
         auto account = formatted_result[2].str();
         auto checksum = formatted_result[3].str();
 
-        account = padding.substr(0, 7 - account.size()) + account;
+        account = string(7 - account.size(), '0') + account;
 
         return bank + account + checksum;
     }

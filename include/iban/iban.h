@@ -77,12 +77,19 @@ class Iban
     // Returns the BBAN from the IBAN, formatted for presentation, in short format if possible
     std::string get_bban_tf() const;
 
+    // ISO7064 checksum algorithm algorithm (mod 97 10)
+    static std::string checksum_mod97(std::string const& s);
+
+    // Converts the account number to the numeric string described in the checksum algorithm (iso7064)
+    static std::string to_numeric(std::string const& s);
+
     private:
-    // Converts the account number to the numeric string described in the checksum algorithm
-    std::string to_numeric(std::string const& s) const;
     std::string iban_checksum(std::string const& country_code, std::string const& bban) const;
+    void set_iban(std::string const& country_code, std::string const& bban, bool validate_bban);
+    void set_bban_position();
 
     std::string m_iban;
+    size_t m_bban_position; // on what position of the iban is the bban starting (0/2/4)
     const Iban_structure_entry& m_iban_structure;
 
     friend std::basic_ostream<char, std::char_traits<char>>& operator<<(std::basic_ostream<char, std::char_traits<char>>& lhs, Iban const& rhs);

@@ -13,11 +13,25 @@
       "branch_code": [5, 10]
     }
   },
+  "IS": {
+    "positions": {
+      "account_code": [4, 22],
+      "bank_code": [0, 4],
+      "branch_code": [0, 0]
+    }
+  },
   "JO": {
     "positions": {
       "account_code": [8, 26],
       "bank_code": [0,4],
       "branch_code": [4,8]
+    }
+  },
+  "PL": {
+    "positions": {
+      "account_code": [8, 24],
+      "bank_code": [0, 8],
+      "branch_code": [0, 0]
     }
   },
   "SN": {

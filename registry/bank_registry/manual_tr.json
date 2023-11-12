@@ -1,10 +1,426 @@
 [
   {
     "country_code": "TR",
+    "bic": "",
+    "bank_code": "00001",
+    "name": "TC Merkez Bankası",
+    "short_name": "TC Merkez Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00004",
+    "name": "İller Bankası",
+    "short_name": "İller Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
     "bic": "TCZBTR2A",
     "bank_code": "00010",
-    "name": "Türkiye Cumhuriyeti Ziraat Bankası A.Ş.",
-    "short_name": "Türkiye Cumhuriyeti Ziraat Bankası A.Ş.",
+    "name": "Ziraat Bankası",
+    "short_name": "Ziraat Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00012",
+    "name": "Halk bank",
+    "short_name": "Halk bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00014",
+    "name": "Sınai Kalkınma Bankası",
+    "short_name": "Sınai Kalkınma Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00015",
+    "name": "Vakıflar Bankası",
+    "short_name": "Vakıflar Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00016",
+    "name": "Eximbank",
+    "short_name": "Eximbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00017",
+    "name": "Kalkınma Bankası",
+    "short_name": "Kalkınma Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00029",
+    "name": "Birleşik Fon Bankası",
+    "short_name": "Birleşik Fon Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "TEBUTRIS382",
+    "bank_code": "00032",
+    "name": "Türk Ekonomi Bankası (TEB)",
+    "short_name": "Türk Ekonomi Bankası (TEB)",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00046",
+    "name": "Akbank",
+    "short_name": "Akbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00059",
+    "name": "Şekerbank",
+    "short_name": "Şekerbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00062",
+    "name": "Garanti Bankası",
+    "short_name": "Garanti Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00064",
+    "name": "İş Bankası",
+    "short_name": "İş Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00067",
+    "name": "Yapı ve Kredi Bankası",
+    "short_name": "Yapı ve Kredi Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00091",
+    "name": "Arap Türk Bankası",
+    "short_name": "Arap Türk Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00092",
+    "name": "Citibank",
+    "short_name": "Citibank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00094",
+    "name": "Bank Mellat",
+    "short_name": "Bank Mellat",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00096",
+    "name": "Turkish Bank",
+    "short_name": "Turkish Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00098",
+    "name": "JPMorgan Chase Bank",
+    "short_name": "JPMorgan Chase Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00099",
+    "name": "ING Bank",
+    "short_name": "ING Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00100",
+    "name": "Adabank",
+    "short_name": "Adabank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00103",
+    "name": "Fibabanka",
+    "short_name": "Fibabanka",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00108",
+    "name": "Turkland Bank",
+    "short_name": "Turkland Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00109",
+    "name": "ICBC Turkey Bank",
+    "short_name": "ICBC Turkey Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00111",
+    "name": "Finansbank",
+    "short_name": "Finansbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00115",
+    "name": "Deutsche Bank",
+    "short_name": "Deutsche Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00116",
+    "name": "Pasha Yatırım Bankası",
+    "short_name": "Pasha Yatırım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "KTEFTRISXXX",
+    "bank_code": "00117",
+    "name": "KUVEYT TURK KATILIM BANKASI A.S.",
+    "short_name": "KUVEYT TURK KATILIM BANKASI A.S.",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00121",
+    "name": "Standard Chartered Yatırım Bankası",
+    "short_name": "Standard Chartered Yatırım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00122",
+    "name": "Societe Generale",
+    "short_name": "Societe Generale",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00123",
+    "name": "HSBC",
+    "short_name": "HSBC",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00124",
+    "name": "Alternatif Bank",
+    "short_name": "Alternatif Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00125",
+    "name": "Burgan Bank",
+    "short_name": "Burgan Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00129",
+    "name": "Merrill Lynch Yatırım Bank",
+    "short_name": "Merrill Lynch Yatırım Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00132",
+    "name": "Takasbank",
+    "short_name": "Takasbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00134",
+    "name": "Denizbank",
+    "short_name": "Denizbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00135",
+    "name": "Anadolu Bank",
+    "short_name": "Anadolu Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00137",
+    "name": "Rabobank",
+    "short_name": "Rabobank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00138",
+    "name": "Dilerbank",
+    "short_name": "Dilerbank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00139",
+    "name": "GSD Bank",
+    "short_name": "GSD Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00141",
+    "name": "Nurol Yatırım Bankası",
+    "short_name": "Nurol Yatırım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00142",
+    "name": "Bankpozitif Kredi ve Kalkınma Bankası",
+    "short_name": "Bankpozitif Kredi ve Kalkınma Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00143",
+    "name": "Aktif Yatırım Bankası",
+    "short_name": "Aktif Yatırım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00146",
+    "name": "Odea Bank",
+    "short_name": "Odea Bank",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00147",
+    "name": "Bank of Tokyo-Mitsubishi UFJ Turkey",
+    "short_name": "Bank of Tokyo-Mitsubishi UFJ Turkey",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00148",
+    "name": "Intesa Sanpaolo S.p.A",
+    "short_name": "Intesa Sanpaolo S.p.A",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "BTFHTRISXXX",
+    "bank_code": "00203",
+    "name": "Albaraka Türk Katılım Bankası",
+    "short_name": "Albaraka Türk Katılım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "KTEFTRISXXX",
+    "bank_code": "00205",
+    "name": "Kuveyt Türk Katılım Bankası",
+    "short_name": "Kuveyt Türk Katılım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00206",
+    "name": "Türkiye Finans Katılım Bankası",
+    "short_name": "Türkiye Finans Katılım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00209",
+    "name": "Ziraat Katılım Bankası",
+    "short_name": "Ziraat Katılım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00210",
+    "name": "Vakıf Katılım Bankası",
+    "short_name": "Vakıf Katılım Bankası",
+    "primary": true
+  },
+  {
+    "country_code": "TR",
+    "bic": "",
+    "bank_code": "00806",
+    "name": "Merkezi Kayıt Kuruluşu",
+    "short_name": "Merkezi Kayıt Kuruluşu",
     "primary": true
   }
 ]

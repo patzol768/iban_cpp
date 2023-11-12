@@ -19,6 +19,13 @@
 namespace iban
 {
 
+enum class BBan_type
+{
+    NATIONAL,
+    IBAN,
+    IBAN_NO_COUTRY
+};
+
 class BBan_handler
 {
     public:
@@ -26,6 +33,9 @@ class BBan_handler
 
     // Returns the coutry code
     virtual std::string const& get_country() const final;
+
+    // True if the given country uses the IBAN format as the local and hence no BBAN format exists.
+    virtual BBan_type get_bban_type() const;
 
     // Validate the structural integrity of the BBAN
     virtual bool is_valid(std::string const& bban) const;
@@ -50,6 +60,9 @@ class BBan_handler
 
     // Formats BBAN according to the local presentation
     virtual std::string format(std::string const& bban) const;
+
+    // Checks if the given country uses IBAN as local format
+    static BBan_type get_bban_type(std::string const& country);
 
     // Runs the country specific validation (false if no validation for the given country)
     static bool is_valid(std::string const& country, std::string const& bban);
@@ -84,6 +97,8 @@ class BBan_handler
     static std::map<std::string, std::string> explode(std::string const& country, std::string const& bban); // TODO
 
     protected:
+    size_t get_bban_shift(std::string const& country) const;
+
     const std::string m_country;
     const Iban_structure_entry& m_iban_structure;
 };

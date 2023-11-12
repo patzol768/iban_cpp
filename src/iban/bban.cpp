@@ -5,7 +5,7 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ */
 
 #include "iban/bban.h"
 #include "iban/bic.h"
@@ -30,6 +30,11 @@ std::string const& BBan_handler::get_country() const
     return m_country;
 }
 
+BBan_type BBan_handler::get_bban_type() const
+{
+    return BBan_type::NATIONAL;
+}
+
 bool BBan_handler::is_valid(std::string const& bban) const
 {
     return is_valid_length(bban) && is_valid_checksum(bban) && is_valid_bankcode(bban) && is_valid_ext(bban);
@@ -37,7 +42,11 @@ bool BBan_handler::is_valid(std::string const& bban) const
 
 bool BBan_handler::is_valid_length(std::string const& bban) const
 {
-    return (bban.size() == m_iban_structure.bban_length);
+    // the iban structure defines the positions from after the iban checksum
+    // when the bban is also an iban, we must consider these extra chars
+    auto shift = get_bban_shift(m_country);
+
+    return (bban.size() == m_iban_structure.bban_length + shift);
 }
 
 bool BBan_handler::is_valid_checksum(std::string const& bban) const
@@ -47,9 +56,20 @@ bool BBan_handler::is_valid_checksum(std::string const& bban) const
 
 bool BBan_handler::is_valid_bankcode(std::string const& bban) const
 {
+    if (!Bic_repository::get_instance()->has_bank_list(m_country))
+    {
+        // cannot validate, no bank list for the given country
+        // (not the best, but can't really do else)
+        return true;
+    }
+
+    // the iban structure defines the positions from after the iban checksum
+    // when the bban is also an iban, we must align the positions
+    auto shift = get_bban_shift(m_country);
+
     // validates only bank code
     // if country has branch validation, the specific subclass must override this one
-    auto bankcode = bban.substr(m_iban_structure.bank_code.first, m_iban_structure.bank_code.second - m_iban_structure.bank_code.first);
+    auto bankcode = bban.substr(m_iban_structure.bank_code.first + shift, m_iban_structure.bank_code.second - m_iban_structure.bank_code.first);
 
     auto bank = Bic_repository::get_instance()->get_by_country_bankcode(m_country, bankcode);
 
@@ -83,6 +103,16 @@ std::string BBan_handler::format(std::string const& bban) const
         return false;                                                             \
     }                                                                             \
     return handler->is_##fn(bban);
+
+BBan_type BBan_handler::get_bban_type(std::string const& country)
+{
+    auto handler = BBan_handler_factory::get_instance()->get_by_country(country);
+    if (!handler)
+    {
+        return BBan_type::NATIONAL;
+    }
+    return handler->get_bban_type();
+}
 
 bool BBan_handler::is_valid(std::string const& country, std::string const& bban)
 {
@@ -140,6 +170,31 @@ std::string BBan_handler::format(std::string const& country, std::string const& 
     }
 
     return bban_handler->format(bban);
+}
+
+size_t BBan_handler::get_bban_shift(std::string const& country) const
+{
+    // the iban structure defines the positions from after the iban checksum
+    // when the bban is also an iban, we must align the positions
+    size_t shift = 0;
+
+    switch (get_bban_type(country))
+    {
+        default:
+        case BBan_type::NATIONAL:
+            shift = 0;
+            break;
+
+        case BBan_type::IBAN_NO_COUTRY:
+            shift = 2;
+            break;
+
+        case BBan_type::IBAN:
+            shift = 4;
+            break;
+    }
+
+    return shift;
 }
 
 // ==========================================================================

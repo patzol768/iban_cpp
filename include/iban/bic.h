@@ -159,6 +159,9 @@ class Bic_repository
     // Looks for country and bankcode.
     std::vector<std::reference_wrapper<Bic_repository_entry const>> get_by_country_bankcode(std::string const& country_code, std::string const& bank_code) const;
 
+    // Checks if the given country has bank list at all
+    bool has_bank_list(std::string const& country);
+
     // setters
 
     // Loads the current set of BIC codes. The "no branch" codes must have "XXX" branch code added.
@@ -176,6 +179,7 @@ class Bic_repository
     static std::multimap<std::string, Bic_repository_entry const* const> m_by_bic;
     static std::multimap<std::string, Bic_repository_entry const* const> m_by_short_bic;
     static std::multimap<std::string, Bic_repository_entry const* const> m_by_code;
+    static std::set<std::string> m_countries;
 };
 
 } // namespace iban

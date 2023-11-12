@@ -8,7 +8,7 @@ import pandas
 # https://www.bankinfrastruktur.se/framtidens-betalningsinfrastruktur/iban-och-svenskt-nationellt-kontonummer
 URL = (
     "https://www.bankinfrastruktur.se/media/d1tlidv0/"
-    "iban-id-och-bic-adress-for-banker-2022-06-23.pdf"
+    "iban-id-och-bic-adress-fo-r-banker-2023-04-14.pdf"
 )
 
 
@@ -23,7 +23,7 @@ def process():
     datas.fillna("", inplace=True)
     datas.sort_values(1, inplace=True)
     for row in datas.itertuples(index=False):
-        bank_code, bic, name = row[1:4]
+        bank_code, bic, name, method = row[1:5]
         registry[str(bank_code).strip()] = {
             "country_code": "SE",
             "primary": True,
@@ -31,6 +31,7 @@ def process():
             "bank_code": str(bank_code).strip(),
             "name": str(name).strip(),
             "short_name": str(name).strip(),
+            "checksum_algo": str(method).strip(),
         }
 
     print(f"Fetched {len(registry)} bank records")

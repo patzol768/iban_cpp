@@ -5,7 +5,7 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ */
 
 #include "iban/iban.h"
 #include "iban/bban.h"
@@ -36,6 +36,8 @@ namespace iban
 // removes non-iban allowed chars, the rest shall contain on IBAN conform chars
 Iban::Iban(std::string const& iban, bool allow_invalid, bool validate_bban)
 : m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(iban.substr(0, 2)))
+, m_iban("")
+, m_bban_position(4)
 {
     // no ::toupper conversion, since IBAN standard defines the use of capital letters
 
@@ -47,6 +49,8 @@ Iban::Iban(std::string const& iban, bool allow_invalid, bool validate_bban)
         throw Iban_error("invalid iban");
     }
 
+    set_bban_position();
+
     if (validate_bban && !is_valid_bban())
     {
         throw Iban_error("invalid bban");
@@ -56,34 +60,26 @@ Iban::Iban(std::string const& iban, bool allow_invalid, bool validate_bban)
 // allows small letters in bban, but would later translate to IBAN conform capital letters
 Iban::Iban(std::string const& country_code, std::string const& bban, bool validate_bban)
 : m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(country_code))
+, m_iban("")
+, m_bban_position(4)
 {
-    std::string temp_bban;
-    transform(bban.begin(), bban.end(), std::back_inserter(temp_bban), ::toupper);
-
-    auto handler = BBan_handler_factory::get_instance()->get_by_country(country_code);
-    auto formatted_bban = (handler) ? handler->preformat(temp_bban) : temp_bban;
-
-    string check = iban_checksum(country_code, formatted_bban);
-
-    m_iban = check + formatted_bban;
-
-    if (validate_bban && !is_valid_bban())
-    {
-        throw Iban_error("invalid bban");
-    }
+    set_iban(country_code, bban, validate_bban);
 }
 
 // not allows separators in any of the inputs
 Iban::Iban(std::string const& country_code, std::string const& bank_code, std::string const& branch_code, std::string const& account_code, bool validate_bban)
 : m_iban_structure(Iban_structure_repository::get_instance()->get_by_country(country_code))
+, m_iban("")
+, m_bban_position(4)
 {
     if (bank_code.size() != m_iban_structure.bank_code.second - m_iban_structure.bank_code.first)
     {
         throw Iban_error("invalid bank code size");
     }
 
-    if (account_code.size() != m_iban_structure.account_code.second - m_iban_structure.account_code.first)
+    if (account_code.size() > m_iban_structure.account_code.second - m_iban_structure.account_code.first)
     {
+        // leading zeros are frequently left in case of account numbers, hence we don't expect equal length
         throw Iban_error("invalid account code size");
     }
 
@@ -94,22 +90,78 @@ Iban::Iban(std::string const& country_code, std::string const& bank_code, std::s
 
     string bban(m_iban_structure.bban_length, '0');
     bban.replace(m_iban_structure.bank_code.first, bank_code.size(), bank_code);
-    bban.replace(m_iban_structure.account_code.first, account_code.size(), account_code);
+    bban.replace(m_iban_structure.account_code.second - account_code.size(), account_code.size(), account_code);
     bban.replace(m_iban_structure.branch_code.first, branch_code.size(), branch_code);
 
-    std::string trimmed_bban;
-    transform(bban.begin(), bban.end(), std::back_inserter(trimmed_bban), ::toupper);
+    // TODO: In PT if account number present separately, than we have to calculate its check digit and append
+    set_iban(country_code, bban, validate_bban);
+}
+
+void Iban::set_iban(std::string const& country_code, std::string const& bban, bool validate_bban)
+{
+    std::string temp_bban;
+    transform(bban.begin(), bban.end(), std::back_inserter(temp_bban), ::toupper);
 
     auto handler = BBan_handler_factory::get_instance()->get_by_country(country_code);
-    auto formatted_bban = (handler) ? handler->preformat(bban) : bban;
+    auto formatted_bban = (handler) ? handler->preformat(temp_bban) : temp_bban;
 
-    string check = iban_checksum(country_code, formatted_bban);
-
-    m_iban = check + formatted_bban;
-
-    if (validate_bban && !is_valid_bban())
+    if (formatted_bban.empty())
     {
         throw Iban_error("invalid bban");
+    }
+
+    if (!handler || handler->get_bban_type() == BBan_type::NATIONAL)
+    {
+        string check = iban_checksum(country_code, formatted_bban);
+
+        m_iban = check + formatted_bban;
+
+        if (validate_bban && !is_valid_bban())
+        {
+            throw Iban_error("invalid bban");
+        }
+    }
+    else
+    {
+        if (handler->get_bban_type() == BBan_type::IBAN)
+        {
+            m_iban = formatted_bban;
+        }
+        else
+        {
+            m_iban = country_code + formatted_bban;
+        }
+
+        // this country uses IBAN as local format, hence we run also IBAN validation
+        // (BBAN validation is only here to accidentally check some "old" checksums)
+        if (validate_bban && !is_valid_bban() && !is_valid())
+        {
+            throw Iban_error("invalid iban");
+        }
+    }
+
+    set_bban_position();
+}
+
+void Iban::set_bban_position()
+{
+    auto handler = BBan_handler_factory::get_instance()->get_by_country(get_country_code());
+    auto bban_type = (handler) ? handler->get_bban_type() : BBan_type::NATIONAL;
+
+    switch (bban_type)
+    {
+        default:
+        case BBan_type::NATIONAL:
+            m_bban_position = 4;
+            break;
+
+        case BBan_type::IBAN_NO_COUTRY:
+            m_bban_position = 2;
+            break;
+
+        case BBan_type::IBAN:
+            m_bban_position = 0;
+            break;
     }
 }
 
@@ -178,22 +230,27 @@ std::string Iban::get_iban_checksum() const
 
 std::string Iban::get_bankcode() const
 {
-    return m_iban.substr(m_iban_structure.bank_code.first, m_iban_structure.bank_code.second - m_iban_structure.bank_code.first);
+    return m_iban.substr(m_iban_structure.bank_code.first + m_bban_position, m_iban_structure.bank_code.second - m_iban_structure.bank_code.first);
 }
 
 std::string Iban::get_branchcode() const
 {
-    return m_iban.substr(m_iban_structure.branch_code.first, m_iban_structure.branch_code.second - m_iban_structure.branch_code.first);
+    return m_iban.substr(m_iban_structure.branch_code.first + m_bban_position, m_iban_structure.branch_code.second - m_iban_structure.branch_code.first);
 }
 
 std::string Iban::get_account() const
 {
-    return m_iban.substr(m_iban_structure.account_code.first, m_iban_structure.account_code.second - m_iban_structure.account_code.first);
+    return m_iban.substr(m_iban_structure.account_code.first + m_bban_position, m_iban_structure.account_code.second - m_iban_structure.account_code.first);
 }
 
 std::string Iban::get_bban() const
 {
-    return m_iban.substr(4);
+    if (m_iban.size() < m_bban_position)
+    {
+        return "";
+    }
+
+    return m_iban.substr(m_bban_position);
 }
 
 std::string Iban::get_bban_t() const
@@ -218,7 +275,7 @@ std::string Iban::get_bban_tf() const
 }
 
 // expects trimmed iban (contains valid iban chars only)
-std::string Iban::to_numeric(std::string const& s) const
+std::string Iban::to_numeric(std::string const& s)
 {
     string result;
 
@@ -237,10 +294,9 @@ std::string Iban::to_numeric(std::string const& s) const
     return result;
 }
 
-// expects trimmed bban (contains valid iban chars only), captial letters in country code
-std::string Iban::iban_checksum(std::string const& country_code, std::string const& bban) const
+std::string Iban::checksum_mod97(std::string const& s)
 {
-    auto numeric = to_numeric(bban + country_code + "00");
+    auto numeric = to_numeric(s);
 
     size_t p = 0;
     size_t digits = 16; // signed 64 bit integer has 19 digits, so to avoid overflow use 16 + 2 (remainder)
@@ -257,7 +313,13 @@ std::string Iban::iban_checksum(std::string const& country_code, std::string con
 
     remainder = 98 - remainder;
 
-    return country_code + ((remainder < 10) ? "0" + to_string(remainder) : to_string(remainder));
+    return (remainder < 10) ? "0" + to_string(remainder) : to_string(remainder);
+}
+
+// expects trimmed bban (contains valid iban chars only), captial letters in country code
+std::string Iban::iban_checksum(std::string const& country_code, std::string const& bban) const
+{
+    return country_code + checksum_mod97(bban + country_code + "00");
 }
 
 // add a singe space after every 4th character

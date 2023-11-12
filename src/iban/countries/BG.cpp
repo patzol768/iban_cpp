@@ -32,9 +32,10 @@ BBan_handler_BG::BBan_handler_BG(std::string const& country)
 bool BBan_handler_BG::is_valid_checksum(std::string const& bban) const
 {
     // according to the official account number formatting rules
-    // there are no country specific checksum
+    // there is no country specific checksum
     //
     // https://www.bnb.bg/bnbweb/groups/public/documents/bnb_law/regulations_iban_en.pdf
+    //
     return true;
 }
 

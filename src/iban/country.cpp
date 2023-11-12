@@ -244,7 +244,7 @@ map<string, Country> Country_repository::m_countries = {
 {"SR", {"SR", "SUR", "740", "Suriname", 1, 0, 0, 0}},
 {"SJ", {"SJ", "SJM", "744", "Svalbard and Jan Mayen", 0, 0, 0, 0}},
 {"SE", {"SE", "SWE", "752", "Sweden", 1, 0, 1, 1}},
-{"CH", {"CH", "CHE", "756", "Switzerland", 1, 0, 0, 1}},
+{"CH", {"CH", "CHE", "756", "Switzerland", 1, 0, 1, 1}},
 {"SY", {"SY", "SYR", "760", "Syrian Arab Republic", 1, 0, 0, 0}},
 {"TW", {"TW", "TWN", "158", "Taiwan, Province of China", 0, 0, 0, 0}},
 {"TJ", {"TJ", "TJK", "762", "Tajikistan", 1, 0, 0, 0}},

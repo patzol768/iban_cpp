@@ -5,7 +5,9 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
- */ 
+ *
+ * Original code: https://github.com/globalcitizen/php-iban/blob/master/php-iban.php
+ */
 
 #include "iban/countries/CZ_SK.h"
 #include "iban/bic.h"
@@ -60,7 +62,6 @@ std::string BBan_handler_CZ_SK::preformat(std::string const& bban) const
     const regex trim("\\s");
     const regex numeric("^.*([0-9]{20}).*$");
     const regex formatted("^[^0-9]*([0-9]{1,6})-([0-9]{10})/([0-9]{4}).*$");
-    const string padding("000000");
 
     auto trimmed_bban = regex_replace(bban, trim, "");
 
@@ -74,7 +75,7 @@ std::string BBan_handler_CZ_SK::preformat(std::string const& bban) const
         auto branch = formatted_result[1].str();
         auto account = formatted_result[2].str();
 
-        branch = padding.substr(0, 6 - branch.size()) + branch;
+        branch = string(6 - branch.size(), '0') + branch;
 
         return bank + branch + account;
     }

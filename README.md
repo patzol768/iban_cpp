@@ -16,3 +16,11 @@ FR IBAN calculator:
 IBAN formats, with country specific BBAN name parts:
     https://www.mutuissimo.it/iban.asp#
 
+Country specific guide by Oracle
+    https://docs.oracle.com/cd/E18727_01/doc.121/e13483/T359831T498954.htm
+
+Other country specific algorithms
+    https://pear.php.net/manual/en/package.validate.validate-fi.validate-fi.bankaccount.php
+    https://pear.php.net/packages.php?catpid=50&catname=Validate
+
+

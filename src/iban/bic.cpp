@@ -307,6 +307,7 @@ std::vector<Bic_repository_entry> Bic_repository::m_elements = {};
 std::multimap<std::string, Bic_repository_entry const* const> Bic_repository::m_by_bic = {};
 std::multimap<std::string, Bic_repository_entry const* const> Bic_repository::m_by_short_bic = {};
 std::multimap<std::string, Bic_repository_entry const* const> Bic_repository::m_by_code = {};
+std::set<std::string> Bic_repository::m_countries = {};
 
 Bic_repository::Bic_repository()
 {
@@ -367,6 +368,11 @@ std::vector<reference_wrapper<Bic_repository_entry const>> Bic_repository::get_b
     return result;
 }
 
+bool Bic_repository::has_bank_list(std::string const& country)
+{
+    return m_countries.find(country) != m_countries.end();
+}
+
 void Bic_repository::load(std::function<void(std::vector<Bic_repository_entry>&)> loader)
 {
     vector<Bic_repository_entry> elements;
@@ -381,18 +387,18 @@ void Bic_repository::load(std::function<void(std::vector<Bic_repository_entry>&)
     for (auto const& element : m_elements)
     {
         auto size = element.bic.size();
-        if (size != 8 && size != 11)
+        if (size == 8 || size == 11)
         {
-            continue;
+            auto bic = (size == 8) ? element.bic + "XXX" : element.bic;
+            auto short_bic = bic.substr(0, 8);
+            m_by_bic.insert({bic, &element});
+            m_by_short_bic.insert({short_bic, &element});
         }
 
-        auto bic = (size == 8) ? element.bic + "XXX" : element.bic;
-        auto short_bic = bic.substr(0, 8);
         auto bank_code = element.country_code + ":" + element.bank_code;
 
-        m_by_bic.insert({bic, &element});
-        m_by_short_bic.insert({short_bic, &element});
         m_by_code.insert({bank_code, &element});
+        m_countries.insert(element.country_code);
     }
 }
 

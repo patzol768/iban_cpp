@@ -7,6 +7,8 @@
  * https://opensource.org/license/mit/
  */ 
 
+#pragma once
+
 #include "iban/bban.h"
 
 namespace iban

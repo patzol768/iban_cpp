@@ -5,6 +5,8 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
+ * 
+ * Original code: https://github.com/globalcitizen/php-iban/blob/master/php-iban.php
  */ 
 
 #include "iban/bic.h"
@@ -31,6 +33,7 @@ BBan_handler_AT::BBan_handler_AT(std::string const& country)
 bool BBan_handler_AT::is_valid_checksum(std::string const& bban) const
 {
     // algorithm (if any) unknown
+    // TODO: look for APSS (Austrian Payment Services System)
     return true;
 }
 
@@ -44,7 +47,6 @@ std::string BBan_handler_AT::preformat(std::string const& bban) const
     const regex trim("\\s");
     const regex numeric("^.*([0-9]{16}).*$");
     const regex formatted("^[^0-9]*([0-9]{5})-([0-9]{1,11})[^0-9]*$");
-    const string padding("00000000000");
 
     auto trimmed_bban = regex_replace(bban, trim, "");
 
@@ -57,7 +59,7 @@ std::string BBan_handler_AT::preformat(std::string const& bban) const
         auto bank = formatted_result[1].str();
         auto account = formatted_result[2].str();
 
-        account = padding.substr(0, 11 - account.size()) + account;
+        account = string(11 - account.size(), '0') + account;
 
         return bank + account;
     }

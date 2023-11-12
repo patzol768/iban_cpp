@@ -5,6 +5,8 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
+ * 
+ * Original code: https://github.com/mdomke/schwifty/schwifty/checksum/italy.py
  */ 
 
 #include "iban/countries/IT.h"

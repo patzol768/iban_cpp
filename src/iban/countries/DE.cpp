@@ -5,11 +5,17 @@
  * this file except in compliance with the License. You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://opensource.org/license/mit/
+ * 
+ * Algorithm description:
+ *   - https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/pruefzifferberechnung/pruefzifferberechnung-fuer-kontonummern-603282
+ * 
+ * Code ideas:
+ *   - https://github.com/mdomke/schwifty/schwifty/checksum/germany.py
+ *   - https://github.com/globalcitizen/php-iban/blob/master/php-iban.php
+ * 
+ * Cross validation:
+ *   - https://www.ibancalculator.com/bic_und_iban.html
  */
-
-// https://www.bundesbank.de/de/aufgaben/unbarer-zahlungsverkehr/serviceangebot/pruefzifferberechnung/pruefzifferberechnung-fuer-kontonummern-603282
-//
-// for checking algorithms: https://www.ibancalculator.com/bic_und_iban.html
 
 #include "iban/countries/DE.h"
 #include "iban/bic.h"
@@ -2435,7 +2441,7 @@ bool BBan_handler_DE::is_valid_checksum(std::string const& bban) const
     }
 
     // log4cplus::Logger logger = log4cplus::Logger::getInstance(LOG4CPLUS_TEXT("main"));
-    // LOG4CPLUS_INFO(logger, LOG4CPLUS_TEXT("DE algo: " << bank[0].get().checksum_algo.value_or("*BLZ not found*")));
+    // LOG4CPLUS_INFO(logger, LOG4CPLUS_TEXT("DE algo: " << bank[0].get().checksum_algo.value_or("*check algorithm for BLZ not found*")));
 
     auto it = checksum_algorithms.find(bank[0].get().checksum_algo.value_or(""));
     if (it != checksum_algorithms.end())
@@ -2467,7 +2473,6 @@ std::string BBan_handler_DE::preformat(std::string const& bban) const
     const regex numeric("^.*([0-9]{18}).*$");
     const regex with_hyphen("^.*([0-9]{8})-([0-9]{1,10}).*$");
     const regex with_blz("^.*([0-9]{1,10})BLZ([0-9]{8}).*$");
-    const string padding("0000000000");
 
     auto trimmed_bban = regex_replace(bban, trim, "");
 
@@ -2480,7 +2485,7 @@ std::string BBan_handler_DE::preformat(std::string const& bban) const
         auto blz = blz_result[2].str();
         auto account = blz_result[1].str();
 
-        account = padding.substr(0, 10 - account.size()) + account;
+        account = string(10 - account.size(), '0') + account;
 
         return blz + account;
     }
@@ -2494,7 +2499,7 @@ std::string BBan_handler_DE::preformat(std::string const& bban) const
         auto blz = hyphen_result[1].str();
         auto account = hyphen_result[2].str();
 
-        account = padding.substr(0, 10 - account.size()) + account;
+        account = string(10 - account.size(), '0') + account;
 
         return blz + account;
     }
