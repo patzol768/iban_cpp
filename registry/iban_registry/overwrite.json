@@ -40,18 +40,9 @@
     "bban_length": 24,
     "iban_length": 28,
     "positions": {
-      "account_code": [
-        0,
-        24
-      ],
-      "bank_code": [
-        0,
-        0
-      ],
-      "branch_code": [
-        0,
-        0
-      ]
+      "account_code": [0, 24],
+      "bank_code": [0, 0],
+      "branch_code": [0, 0]
     }
   }
 }

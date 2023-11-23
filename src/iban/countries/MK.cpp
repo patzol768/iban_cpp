@@ -84,7 +84,7 @@ std::string BBan_handler_MK::format(std::string const& bban) const
     auto account = bban.substr(3, 10); // Account
     auto check = bban.substr(13);      // Checksum
 
-    return bank + " " + account + " " + check;
+    return bank + "-" + account + "-" + check;
 }
 
 } // namespace countries
