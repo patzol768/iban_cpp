@@ -50,6 +50,12 @@ class Iban
     // Validates the bban
     bool is_valid_bban() const;
 
+    // Returns the whole IBAN, without separators
+    std::string get_iban() const;
+
+    // Returns the whole IBAN, formatted
+    std::string get_iban_f() const;
+
     // Returns the country code from the IBAN
     std::string get_country_code() const;
 

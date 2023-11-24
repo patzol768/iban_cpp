@@ -1,10 +1,9 @@
 cmake_minimum_required( VERSION 3.14.0 FATAL_ERROR )
 
-project( "iban-cpp" VERSION 0.1.0 LANGUAGES CXX )
+project( "iban-cpp" VERSION 0.1.0 LANGUAGES CXX C )
 message( STATUS "See README.md" )
 
 set( LIB_NAME "iban-cpp" )
-set( APP_NAME "iban" )
 
 #
 # Tools
@@ -63,7 +62,6 @@ set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake" )
 #
 # Libraries
 #
-#find_package( Catch2 REQUIRED )
 
 pkg_check_modules(LOG4CPLUS log4cplus REQUIRED)
 
@@ -74,8 +72,6 @@ FetchContent_MakeAvailable( nlohmann_json )
 
 set( JSON_INCLUDE ${nlohmann_json_SOURCE_DIR}/include )
 message( STATUS "nlohmann::json include: ${JSON_INCLUDE}")
-
-# LIB_DYNLOAD = -ldl    --> TODO: Not a package, just add to library list
 
 #
 # Sources
@@ -94,11 +90,6 @@ message( STATUS "Sources in: ${SOURCE_DIR}")
 add_library( ${LIB_NAME} SHARED ${SOURCE_FILES} )
 target_include_directories( ${LIB_NAME} PUBLIC ${INCLUDE_DIR} SYSTEM ${JSON_INCLUDE} )
 set_target_properties( ${LIB_NAME} PROPERTIES VERSION ${PROJECT_VERSION} )
-
-add_executable( ${APP_NAME} "${SOURCE_DIR}/main.cpp")
-target_include_directories( ${APP_NAME} PUBLIC ${INCLUDE_DIR} ${LOG4CPLUS_INCLUDE_DIRS} )
-target_link_directories( ${APP_NAME} PUBLIC ${LOG4CPLUS_LIBRARY_DIRS} )
-target_link_libraries( ${APP_NAME} ${LIB_NAME} ${LOG4CPLUS_LIBRARIES} )
 
 #
 # Tests
@@ -127,7 +118,24 @@ foreach ( TMP_PATH ${TEST_SOURCE_FILES} )
 
     add_test ( NAME ${TMP_APP_NAME} COMMAND ${TMP_APP_NAME} )
 
-    set_property(TEST ${TMP_APP_NAME} PROPERTY ENVIRONMENT "LOG4CPLUS_CONFIG=../log.ini")
+    set_property(TEST ${TMP_APP_NAME} PROPERTY ENVIRONMENT "LOG4CPLUS_CONFIG=../log.ini;IBAN_BANK_REGISTRY=../registry/bank_registry/;IBAN_REGISTRY=../registry/iban_registry/")
 endforeach ( TMP_PATH )
 
+# each c file is a separate test file
+file ( GLOB_RECURSE TEST_C_SOURCE_FILES "${TEST_SOURCE_DIR}/*.c" )
+
+foreach ( TMP_PATH ${TEST_C_SOURCE_FILES} )
+    get_filename_component ( TMP_APP_NAME ${TMP_PATH} NAME_WLE )
+
+    add_executable ( ${TMP_APP_NAME} ${TMP_PATH} )
+
+    target_include_directories( ${TMP_APP_NAME} PUBLIC ${INCLUDE_DIR} ${TEST_SOURCE_DIR} )
+    target_link_libraries( ${TMP_APP_NAME} ${LIB_NAME} ${LOG4CPLUS_LIBRARIES} )
+
+    target_compile_options( ${TMP_APP_NAME} PUBLIC "-DUNIT_TEST" )
+
+    add_test ( NAME ${TMP_APP_NAME} COMMAND ${TMP_APP_NAME} )
+
+    set_property(TEST ${TMP_APP_NAME} PROPERTY ENVIRONMENT "LOG4CPLUS_CONFIG=../log.ini;IBAN_BANK_REGISTRY=../registry/bank_registry/;IBAN_REGISTRY=../registry/iban_registry/")
+endforeach ( TMP_PATH )
 

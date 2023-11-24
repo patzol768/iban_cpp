@@ -218,6 +218,29 @@ bool Iban::is_valid_bban() const
     return get_bban().size() == iban_structure.bban_length;
 }
 
+std::string Iban::get_iban() const
+{
+    return m_iban;
+}
+
+std::string Iban::get_iban_f() const
+{
+    string formatted;
+    auto iban_size = m_iban.size();
+
+    for (size_t p = 0; p < iban_size; p += 4)
+    {
+        formatted += m_iban.substr(p, 4);
+
+        if (p + 4 < iban_size)
+        {
+            formatted += ' ';
+        }
+    }
+
+    return formatted;
+}
+
 std::string Iban::get_country_code() const
 {
     return m_iban.substr(0, 2);
@@ -322,24 +345,9 @@ std::string Iban::iban_checksum(std::string const& country_code, std::string con
     return country_code + checksum_mod97(bban + country_code + "00");
 }
 
-// add a singe space after every 4th character
-// TODO: better algorithm?
 std::basic_ostream<char, std::char_traits<char>>& operator<<(std::basic_ostream<char, std::char_traits<char>>& lhs, Iban const& rhs)
 {
-    string formatted;
-    auto iban_size = rhs.m_iban.size();
-
-    for (size_t p = 0; p < iban_size; ++p)
-    {
-        formatted += rhs.m_iban.at(p);
-
-        if (p % 4 == 3 && p + 1 < iban_size)
-        {
-            formatted += ' ';
-        }
-    }
-
-    return lhs << formatted;
+    return lhs << rhs.get_iban_f();
 }
 
 // ==========================================================================

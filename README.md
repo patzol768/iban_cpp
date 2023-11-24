@@ -171,7 +171,22 @@ IBAN structure definition normally contains the bank, branch and account parts; 
 
 ## C
 
-TBD.
+There's a very small wrapper around the methods of the IBAN class. This way one can use in C projects (and many others).
+
+Note that the log4cplus library would be needed for linking, since the default data readers are using that. For compile only one single header is needed. (There's a test written in C, as a reference.)
+
+```c
+    #include "iban/capi.h"
+
+    accno = "RO34 UGBI 0000 3620 0627 7RON";
+
+    iban = iban_new(accno, false, true);
+    if (!iban)
+        goto err;
+
+    str = iban_get_iban(iban); // free() when not needed anymore
+    printf("%s\n", str);
+```
 
 # Extension
 
