@@ -245,3 +245,11 @@ In case the given country is not publicly publishing the list of Banks in an ele
     }
   }
 ```
+
+# Some notes
+
+There are certainly bugs. Feel free to fix or just notify me, although I cannot promise anything.
+
+I was trying to use adequately licensed materials and parts. Yet if you feel any possible license issues, please contact.
+
+Feel free to use anywhere. If you find this useful, than please consider some contribution in order to make it even more appealing and useful for others.
