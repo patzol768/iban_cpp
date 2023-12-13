@@ -12,16 +12,11 @@ include(FindPkgConfig)
 include(FetchContent)
 
 #
-# Build Options
-#
-if( CMAKE_BUILD_TYPE STREQUAL "" )
-    set( CMAKE_BUILD_TYPE "debug" )
-endif ( )
-
-#
 # Build types
 #
-set( CMAKE_CONFIGURATION_TYPES debug release)
+set( CMAKE_CONFIGURATION_TYPES Debug Release)
+
+message("Generated with config types: ${CMAKE_CONFIGURATION_TYPES}")
 
 #
 # Configuration
@@ -94,6 +89,8 @@ set_target_properties( ${LIB_NAME} PROPERTIES VERSION ${PROJECT_VERSION} )
 #
 # Tests
 #
+set_property(GLOBAL PROPERTY CTEST_TARGETS_ADDED 1)
+
 include(CTest)
 enable_testing()
 
