@@ -7,6 +7,7 @@
  * https://opensource.org/license/mit/
  */
 
+#include "iban/bban.h"
 #include "iban/countries/AT.h"
 #include "iban/countries/BA.h"
 #include "iban/countries/BE.h"
@@ -42,48 +43,48 @@
 #include <memory>
 
 #define REGISTER_HANDLER(country, handler) \
-    ::iban::BBan_handler_factory::get_instance()->register_handler(country, std::dynamic_pointer_cast<::iban::BBan_handler>(std::make_shared<::iban::countries::handler>(country)))
+    ::iban::BBan_handler_factory::get_instance()->register_handler(country, std::dynamic_pointer_cast<::iban::BBan_handler>(std::make_shared<::iban::BBan_handler>(country)))
 
 #define REGISTER_ALL_HANDERS()                  \
-    REGISTER_HANDLER("AT", ::iban::BBan_handler_AT);    \
-    REGISTER_HANDLER("BA", ::iban::BBan_handler_BA);    \
-    REGISTER_HANDLER("BE", ::iban::BBan_handler_BE);    \
-    REGISTER_HANDLER("BG", ::iban::BBan_handler_BG);    \
-    REGISTER_HANDLER("CF", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("CG", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("CH", ::iban::BBan_handler_CH);    \
-    REGISTER_HANDLER("CZ", ::iban::BBan_handler_CZ_SK); \
-    REGISTER_HANDLER("DE", ::iban::BBan_handler_DE);    \
-    REGISTER_HANDLER("EE", ::iban::BBan_handler_EE);    \
-    REGISTER_HANDLER("ES", ::iban::BBan_handler_ES);    \
-    REGISTER_HANDLER("DJ", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("FI", ::iban::BBan_handler_FI);    \
-    REGISTER_HANDLER("FR", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("GA", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("GQ", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("HU", ::iban::BBan_handler_HU);    \
-    REGISTER_HANDLER("HR", ::iban::BBan_handler_HR);    \
-    REGISTER_HANDLER("IE", ::iban::BBan_handler_IE);    \
-    REGISTER_HANDLER("IS", ::iban::BBan_handler_IS);    \
-    REGISTER_HANDLER("IT", ::iban::BBan_handler_IT);    \
-    REGISTER_HANDLER("LI", ::iban::BBan_handler_LI);    \
-    REGISTER_HANDLER("LT", ::iban::BBan_handler_LT);    \
-    REGISTER_HANDLER("LU", ::iban::BBan_handler_LU);    \
-    REGISTER_HANDLER("LV", ::iban::BBan_handler_LV);    \
-    REGISTER_HANDLER("KM", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("MC", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("ME", ::iban::BBan_handler_ME);    \
-    REGISTER_HANDLER("MK", ::iban::BBan_handler_MK);    \
-    REGISTER_HANDLER("MT", ::iban::BBan_handler_MT);    \
-    REGISTER_HANDLER("NL", ::iban::BBan_handler_NL);    \
-    REGISTER_HANDLER("NO", ::iban::BBan_handler_NO);    \
-    REGISTER_HANDLER("PL", ::iban::BBan_handler_PL);    \
-    REGISTER_HANDLER("PT", ::iban::BBan_handler_PT);    \
-    REGISTER_HANDLER("RO", ::iban::BBan_handler_RO);    \
-    REGISTER_HANDLER("RS", ::iban::BBan_handler_RS);    \
-    REGISTER_HANDLER("SE", ::iban::BBan_handler_SE);    \
-    REGISTER_HANDLER("SI", ::iban::BBan_handler_SI);    \
-    REGISTER_HANDLER("SK", ::iban::BBan_handler_CZ_SK); \
-    REGISTER_HANDLER("SM", ::iban::BBan_handler_IT);    \
-    REGISTER_HANDLER("TD", ::iban::BBan_handler_FR);    \
-    REGISTER_HANDLER("TR", ::iban::BBan_handler_TR);
+    REGISTER_HANDLER("AT", ::iban::countries::BBan_handler_AT);    \
+    REGISTER_HANDLER("BA", ::iban::countries::BBan_handler_BA);    \
+    REGISTER_HANDLER("BE", ::iban::countries::BBan_handler_BE);    \
+    REGISTER_HANDLER("BG", ::iban::countries::BBan_handler_BG);    \
+    REGISTER_HANDLER("CF", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("CG", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("CH", ::iban::countries::BBan_handler_CH);    \
+    REGISTER_HANDLER("CZ", ::iban::countries::BBan_handler_CZ_SK); \
+    REGISTER_HANDLER("DE", ::iban::countries::BBan_handler_DE);    \
+    REGISTER_HANDLER("EE", ::iban::countries::BBan_handler_EE);    \
+    REGISTER_HANDLER("ES", ::iban::countries::BBan_handler_ES);    \
+    REGISTER_HANDLER("DJ", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("FI", ::iban::countries::BBan_handler_FI);    \
+    REGISTER_HANDLER("FR", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("GA", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("GQ", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("HU", ::iban::countries::BBan_handler_HU);    \
+    REGISTER_HANDLER("HR", ::iban::countries::BBan_handler_HR);    \
+    REGISTER_HANDLER("IE", ::iban::countries::BBan_handler_IE);    \
+    REGISTER_HANDLER("IS", ::iban::countries::BBan_handler_IS);    \
+    REGISTER_HANDLER("IT", ::iban::countries::BBan_handler_IT);    \
+    REGISTER_HANDLER("LI", ::iban::countries::BBan_handler_LI);    \
+    REGISTER_HANDLER("LT", ::iban::countries::BBan_handler_LT);    \
+    REGISTER_HANDLER("LU", ::iban::countries::BBan_handler_LU);    \
+    REGISTER_HANDLER("LV", ::iban::countries::BBan_handler_LV);    \
+    REGISTER_HANDLER("KM", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("MC", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("ME", ::iban::countries::BBan_handler_ME);    \
+    REGISTER_HANDLER("MK", ::iban::countries::BBan_handler_MK);    \
+    REGISTER_HANDLER("MT", ::iban::countries::BBan_handler_MT);    \
+    REGISTER_HANDLER("NL", ::iban::countries::BBan_handler_NL);    \
+    REGISTER_HANDLER("NO", ::iban::countries::BBan_handler_NO);    \
+    REGISTER_HANDLER("PL", ::iban::countries::BBan_handler_PL);    \
+    REGISTER_HANDLER("PT", ::iban::countries::BBan_handler_PT);    \
+    REGISTER_HANDLER("RO", ::iban::countries::BBan_handler_RO);    \
+    REGISTER_HANDLER("RS", ::iban::countries::BBan_handler_RS);    \
+    REGISTER_HANDLER("SE", ::iban::countries::BBan_handler_SE);    \
+    REGISTER_HANDLER("SI", ::iban::countries::BBan_handler_SI);    \
+    REGISTER_HANDLER("SK", ::iban::countries::BBan_handler_CZ_SK); \
+    REGISTER_HANDLER("SM", ::iban::countries::BBan_handler_IT);    \
+    REGISTER_HANDLER("TD", ::iban::countries::BBan_handler_FR);    \
+    REGISTER_HANDLER("TR", ::iban::countries::BBan_handler_TR);
