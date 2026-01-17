@@ -39,6 +39,7 @@
 #include "iban/countries/SE.h"
 #include "iban/countries/SI.h"
 #include "iban/countries/TR.h"
+#include <memory>
 
 #define REGISTER_HANDLER(country, handler) \
     ::iban::BBan_handler_factory::get_instance()->register_handler(country, std::dynamic_pointer_cast<::iban::BBan_handler>(std::make_shared<::iban::countries::handler>(country)))
