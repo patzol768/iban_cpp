@@ -6,16 +6,37 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+# # Debugging http get call
+# # from: https://stackoverflow.com/questions/10588644/how-can-i-see-the-entire-http-request-thats-being-sent-by-my-python-application
+# import logging
+#
+# # These two lines enable debugging at httplib level (requests->urllib3->http.client)
+# # You will see the REQUEST, including HEADERS and DATA, and RESPONSE with HEADERS but without DATA.
+# # The only thing missing will be the response.body which is not logged.
+# try:
+#     import http.client as http_client
+# except ImportError:
+#     # Python 2
+#     import httplib as http_client
+# http_client.HTTPConnection.debuglevel = 1
+#
+# # You must initialize logging, otherwise you'll not see debug output.
+# logging.basicConfig()
+# logging.getLogger().setLevel(logging.DEBUG)
+# requests_log = logging.getLogger("requests.packages.urllib3")
+# requests_log.setLevel(logging.DEBUG)
+# requests_log.propagate = True
+
 
 COUNTRY_CODE_PATTERN = r"[A-Z]{2}"
 EMPTY_RANGE = (0, 0)
 URL = "https://www.swift.com/standards/data-standards/iban"
-
+HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0'}
 
 def get_raw():
-    soup = BeautifulSoup(requests.get(URL).content, "html.parser")
+    soup = BeautifulSoup(requests.get(url=URL, headers=HEADERS).content, "html.parser")
     link = soup.find("a", attrs={"data-tracking-title": "IBAN Registry (TXT)"})
-    return requests.get(urljoin(URL, link["href"])).content.decode(encoding="latin1")
+    return requests.get(url=urljoin(URL, link["href"]), headers=HEADERS).content.decode(encoding="latin1")
 
 
 def parse_int(raw):
