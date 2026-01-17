@@ -8,11 +8,12 @@ import requests
 BRANCH_URL = "https://bank.gov.ua/NBU_BankInfo/get_data_branch?json"
 PARENT_URL = "https://bank.gov.ua/NBU_BankInfo/get_data_branch_glbank?json"
 
-
-def split_names(s) -> tuple[str, str]:
-    """This will split the `NAME_E` line from the API into a name and a short name"""
-    name, short_name = (name.strip() for name in s[:-1].split(" (скорочена назва - "))
-    return name, short_name
+# it seems that they're not including both the long and short names anymore
+# kept here if later on they change again
+#def split_names(s) -> tuple[str, str]:
+#    """This will split the `NAME_E` line from the API into a name and a short name"""
+#    name, short_name = (name.strip() for name in s[:-1].split(" (скорочена назва - "))
+#    return name, short_name
 
 
 def get_data(filter_insolvent: bool = True) -> pd.DataFrame:
@@ -43,10 +44,12 @@ def get_data(filter_insolvent: bool = True) -> pd.DataFrame:
 
         # Get the name of parent bank from
         parent_names = parents.loc[parents["GLMFO"] == glmfo]["NAME_E"].iloc[0]
-        parent_full_name, parent_short_name = split_names(parent_names)
-
-        branches.loc[idx, "NGOL_E"] = parent_full_name  # type: ignore
-        branches.loc[idx, "NGOL_E_SHORT"] = parent_short_name  # type: ignore
+#        parent_full_name, parent_short_name = split_names(parent_names)
+#
+#        branches.loc[idx, "NGOL_E"] = parent_full_name  # type: ignore
+#        branches.loc[idx, "NGOL_E_SHORT"] = parent_short_name  # type: ignore
+        branches.loc[idx, "NGOL_E"] = parent_names  # type: ignore
+        branches.loc[idx, "NGOL_E_SHORT"] = parent_names  # type: ignore
 
     return branches
 

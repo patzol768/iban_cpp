@@ -68,8 +68,8 @@
     "primary": true,
     "bic": "",
     "bank_code": "2100",
-    "name": "Hypote\u00c4\u008dn\u00c3\u00ad banka, a.s.",
-    "short_name": "Hypote\u00c4\u008dn\u00c3\u00ad banka, a.s."
+    "name": "\u00c4\u008cSOB Hypote\u00c4\u008dn\u00c3\u00ad banka, a.s.",
+    "short_name": "\u00c4\u008cSOB Hypote\u00c4\u008dn\u00c3\u00ad banka, a.s."
   },
   {
     "country_code": "CZ",
@@ -106,14 +106,6 @@
   {
     "country_code": "CZ",
     "primary": true,
-    "bic": "",
-    "bank_code": "2275",
-    "name": "Podnikatelsk\u00c3\u00a1 dru\u00c5\u00bestevn\u00c3\u00ad z\u00c3\u00a1lo\u00c5\u00bena",
-    "short_name": "Podnikatelsk\u00c3\u00a1 dru\u00c5\u00bestevn\u00c3\u00ad z\u00c3\u00a1lo\u00c5\u00bena"
-  },
-  {
-    "country_code": "CZ",
-    "primary": true,
     "bic": "CITICZPX",
     "bank_code": "2600",
     "name": "Citibank Europe plc, organiza\u00c4\u008dn\u00c3\u00ad slo\u00c5\u00beka",
@@ -138,14 +130,6 @@
   {
     "country_code": "CZ",
     "primary": true,
-    "bic": "BPPFCZP1",
-    "bank_code": "3050",
-    "name": "BNP Paribas Personal Finance SA, od\u00c5\u00a1t\u00c4\u009bpn\u00c3\u00bd z\u00c3\u00a1vod",
-    "short_name": "BNP Paribas Personal Finance SA, od\u00c5\u00a1t\u00c4\u009bpn\u00c3\u00bd z\u00c3\u00a1vod"
-  },
-  {
-    "country_code": "CZ",
-    "primary": true,
     "bic": "BPKOCZPP",
     "bank_code": "3060",
     "name": "PKO BP S.A., Czech Branch",
@@ -158,14 +142,6 @@
     "bank_code": "3500",
     "name": "ING Bank N.V.",
     "short_name": "ING Bank N.V."
-  },
-  {
-    "country_code": "CZ",
-    "primary": true,
-    "bic": "EXPNCZPP",
-    "bank_code": "4000",
-    "name": "Max banka a.s.",
-    "short_name": "Max banka a.s."
   },
   {
     "country_code": "CZ",
@@ -222,6 +198,14 @@
     "bank_code": "6300",
     "name": "BNP Paribas S.A., pobo\u00c4\u008dka \u00c4\u008cesk\u00c3\u00a1 republika",
     "short_name": "BNP Paribas S.A., pobo\u00c4\u008dka \u00c4\u008cesk\u00c3\u00a1 republika"
+  },
+  {
+    "country_code": "CZ",
+    "primary": true,
+    "bic": "",
+    "bank_code": "6363",
+    "name": "Partners Banka, a.s.",
+    "short_name": "Partners Banka, a.s."
   },
   {
     "country_code": "CZ",
@@ -370,33 +354,25 @@
   {
     "country_code": "CZ",
     "primary": true,
-    "bic": "FAPOCZP1",
-    "bank_code": "8270",
-    "name": "Fairplay Pay s.r.o.",
-    "short_name": "Fairplay Pay s.r.o."
-  },
-  {
-    "country_code": "CZ",
-    "primary": true,
-    "bic": "BEFKCZP1",
-    "bank_code": "8280",
-    "name": "B-Efekt a.s.",
-    "short_name": "B-Efekt a.s."
-  },
-  {
-    "country_code": "CZ",
-    "primary": true,
-    "bic": "BEORCZP2",
-    "bank_code": "8299",
-    "name": "BESTPAY s.r.o.",
-    "short_name": "BESTPAY s.r.o."
+    "bic": "",
+    "bank_code": "8500",
+    "name": "Multitude Bank p.l.c.",
+    "short_name": "Multitude Bank p.l.c."
   },
   {
     "country_code": "CZ",
     "primary": true,
     "bic": "",
-    "bank_code": "8500",
-    "name": "Multitude Bank p.l.c.",
-    "short_name": "Multitude Bank p.l.c."
+    "bank_code": "8610",
+    "name": "Devizov\u00c3\u00a1 burza a.s.",
+    "short_name": "Devizov\u00c3\u00a1 burza a.s."
+  },
+  {
+    "country_code": "CZ",
+    "primary": true,
+    "bic": "",
+    "bank_code": "8660",
+    "name": "PAYMONT, UAB",
+    "short_name": "PAYMONT, UAB"
   }
 ]

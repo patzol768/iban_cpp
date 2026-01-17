@@ -2684,8 +2684,8 @@
     "primary": true,
     "bic": "MKKBHUHB",
     "bank_code": "10106475",
-    "name": "MBH 504 Karcag K\u00e1lvin",
-    "short_name": "MBH 504 Karcag K\u00e1lvin"
+    "name": "MBH 504 B\u00e9k\u00e9scsaba Csabacenter",
+    "short_name": "MBH 504 B\u00e9k\u00e9scsaba Csabacenter"
   },
   {
     "country_code": "HU",
@@ -3380,8 +3380,8 @@
     "primary": true,
     "bic": "MKKBHUHB",
     "bank_code": "10107366",
-    "name": "MBH 504 \u00d3zd Brass\u00f3i",
-    "short_name": "MBH 504 \u00d3zd Brass\u00f3i"
+    "name": "MBH 504 Debrecen Debrecen Plaza",
+    "short_name": "MBH 504 Debrecen Debrecen Plaza"
   },
   {
     "country_code": "HU",
@@ -5148,6 +5148,14 @@
     "primary": true,
     "bic": "MKKBHUHB",
     "bank_code": "10300002",
+    "name": "MBH Bank Nyrt.",
+    "short_name": "MBH Bank Nyrt."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "MKKBHUHB",
+    "bank_code": "10310001",
     "name": "MBH Bank Nyrt.",
     "short_name": "MBH Bank Nyrt."
   },
@@ -8404,8 +8412,8 @@
     "primary": true,
     "bic": "CIBHHUHB",
     "bank_code": "10701025",
-    "name": "CIB Bank Zrt. Soroks\u00e1r\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
-    "short_name": "CIB Bank Zrt. Soroks\u00e1r\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0"
+    "name": "CIB Bank Zrt. Soroks\u00e1r",
+    "short_name": "CIB Bank Zrt. Soroks\u00e1r"
   },
   {
     "country_code": "HU",
@@ -8862,6 +8870,14 @@
     "bank_code": "10701599",
     "name": "CIB Bank Zrt.K\u00d6KI fi\u00f3k",
     "short_name": "CIB Bank Zrt.K\u00d6KI fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "CIBHHUHB",
+    "bank_code": "10701609",
+    "name": "CIB Bank Zrt. BEM Center Fi\u00f3k",
+    "short_name": "CIB Bank Zrt. BEM Center Fi\u00f3k"
   },
   {
     "country_code": "HU",
@@ -9540,8 +9556,8 @@
     "primary": true,
     "bic": "CIBHHUHB",
     "bank_code": "11101301",
-    "name": "CIB Bank Zrt. Zugl\u00f3\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
-    "short_name": "CIB Bank Zrt. Zugl\u00f3\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0"
+    "name": "CIB Bank Zrt. Zugl\u00f3",
+    "short_name": "CIB Bank Zrt. Zugl\u00f3"
   },
   {
     "country_code": "HU",
@@ -10404,8 +10420,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11701004",
-    "name": "OTP Budapesti r., I. Alag\u00fat u.",
-    "short_name": "OTP Budapesti r., I. Alag\u00fat u."
+    "name": "OTP Budapesti r., I. Iskola u.",
+    "short_name": "OTP Budapesti r., I. Iskola u."
   },
   {
     "country_code": "HU",
@@ -10708,8 +10724,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11707062",
-    "name": "OTP Budapesti r., VII. K\u00e1roly krt.",
-    "short_name": "OTP Budapesti r., VII. K\u00e1roly krt."
+    "name": "OTP BPR, VII. K\u00e1roly krt.",
+    "short_name": "OTP BPR, VII. K\u00e1roly krt."
   },
   {
     "country_code": "HU",
@@ -11139,6 +11155,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
+    "bank_code": "11713249",
+    "name": "OTP BPR 1131 Budapest, Bab\u00e9r utca 1-5.",
+    "short_name": "OTP BPR 1131 Budapest, Bab\u00e9r utca 1-5."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
     "bank_code": "11713500",
     "name": "OTP BPR Ingatlanhit.feld. \u00e9s d\u00f6nt\u00e9sh.K. ",
     "short_name": "OTP BPR Ingatlanhit.feld. \u00e9s d\u00f6nt\u00e9sh.K. "
@@ -11220,8 +11244,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11715014",
-    "name": "OTP Budapesti r., XV. F\u0151 u.",
-    "short_name": "OTP Budapesti r., XV. F\u0151 u."
+    "name": "OTP Budapesti r. XV. P\u00f3lus Center",
+    "short_name": "OTP Budapesti r. XV. P\u00f3lus Center"
   },
   {
     "country_code": "HU",
@@ -11252,8 +11276,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11716015",
-    "name": "OTP Budapesti r., XVI. R\u00e1kosi \u00fat",
-    "short_name": "OTP Budapesti r., XVI. R\u00e1kosi \u00fat"
+    "name": "OTP Budapesti r., XVI. J\u00f3kai u.",
+    "short_name": "OTP Budapesti r., XVI. J\u00f3kai u."
   },
   {
     "country_code": "HU",
@@ -11308,8 +11332,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11718048",
-    "name": "OTP Budapesti r., Delta \u00dczleth\u00e1z",
-    "short_name": "OTP Budapesti r., Delta \u00dczleth\u00e1z"
+    "name": "OTP Budapesti r. XVIII. \u00dcll\u0151i \u00fat",
+    "short_name": "OTP Budapesti r. XVIII. \u00dcll\u0151i \u00fat"
   },
   {
     "country_code": "HU",
@@ -11364,8 +11388,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11720025",
-    "name": "OTP Budapesti r., XX. B\u00edr\u00f3 Mih\u00e1ly u.",
-    "short_name": "OTP Budapesti r., XX. B\u00edr\u00f3 Mih\u00e1ly u."
+    "name": "OTP BPR, XX. B\u00edr\u00f3 Mih\u00e1ly u.",
+    "short_name": "OTP BPR, XX. B\u00edr\u00f3 Mih\u00e1ly u."
   },
   {
     "country_code": "HU",
@@ -11532,8 +11556,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11731104",
-    "name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., P\u00e9csv\u00e1rad",
-    "short_name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., P\u00e9csv\u00e1rad"
+    "name": "OTP DDR, P\u00e9csv\u00e1rad",
+    "short_name": "OTP DDR, P\u00e9csv\u00e1rad"
   },
   {
     "country_code": "HU",
@@ -11700,16 +11724,16 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11732105",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., Dunavecse",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Dunavecse"
+    "name": "OTP DAR, Dunavecse",
+    "short_name": "OTP DAR, Dunavecse"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11732112",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., Izs\u00e1k",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Izs\u00e1k"
+    "name": "OTP DAR, Izs\u00e1k",
+    "short_name": "OTP DAR, Izs\u00e1k"
   },
   {
     "country_code": "HU",
@@ -11756,8 +11780,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11732174",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., M\u00e9lyk\u00fat",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., M\u00e9lyk\u00fat"
+    "name": "OTP DAR M\u00e9lyk\u00fat",
+    "short_name": "OTP DAR M\u00e9lyk\u00fat"
   },
   {
     "country_code": "HU",
@@ -11956,8 +11980,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11733089",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., Battonya",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Battonya"
+    "name": "OTP DAR, Battonya",
+    "short_name": "OTP DAR, Battonya"
   },
   {
     "country_code": "HU",
@@ -12036,16 +12060,16 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11733182",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., T\u00f3tkoml\u00f3s",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., T\u00f3tkoml\u00f3s"
+    "name": "OTP D\u00e9l-alf\u00f6ldi r., Orosh\u00e1za",
+    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Orosh\u00e1za"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11733199",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., \u00dajk\u00edgy\u00f3s",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., \u00dajk\u00edgy\u00f3s"
+    "name": "OTP DAR B\u00e9k\u00e9scsaba",
+    "short_name": "OTP DAR B\u00e9k\u00e9scsaba"
   },
   {
     "country_code": "HU",
@@ -12244,8 +12268,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11734190",
-    "name": "OTP \u00c9szak-keleti r., Sziksz\u00f3",
-    "short_name": "OTP \u00c9szak-keleti r., Sziksz\u00f3"
+    "name": "OTP \u00c9KMR, Sziksz\u00f3",
+    "short_name": "OTP \u00c9KMR, Sziksz\u00f3"
   },
   {
     "country_code": "HU",
@@ -12451,6 +12475,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
+    "bank_code": "11735218",
+    "name": "OTP DAR Szeged Priv\u00e1tBank",
+    "short_name": "OTP DAR Szeged Priv\u00e1tBank"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
     "bank_code": "11736006",
     "name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Sz\u00e9kesfeh\u00e9rv\u00e1r",
     "short_name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Sz\u00e9kesfeh\u00e9rv\u00e1r"
@@ -12572,8 +12604,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11737038",
-    "name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Gy\u0151r-Szentiv\u00e1n",
-    "short_name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Gy\u0151r-Szentiv\u00e1n"
+    "name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Gy\u0151r",
+    "short_name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Gy\u0151r"
   },
   {
     "country_code": "HU",
@@ -12748,8 +12780,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11738053",
-    "name": "OTP \u00c9szak-keleti r., P\u00fcsp\u00f6klad\u00e1ny",
-    "short_name": "OTP \u00c9szak-keleti r., P\u00fcsp\u00f6klad\u00e1ny"
+    "name": "OTP \u00c9KR, P\u00fcsp\u00f6klad\u00e1ny",
+    "short_name": "OTP \u00c9KR, P\u00fcsp\u00f6klad\u00e1ny"
   },
   {
     "country_code": "HU",
@@ -12804,16 +12836,16 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11738125",
-    "name": "OTP \u00c9szak-keleti r., Hajd\u00fadorog",
-    "short_name": "OTP \u00c9szak-keleti r., Hajd\u00fadorog"
+    "name": "OTP \u00c9KMR, Hajd\u00fadorog",
+    "short_name": "OTP \u00c9KMR, Hajd\u00fadorog"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11738132",
-    "name": "OTP \u00c9szak-keleti r., Kom\u00e1di",
-    "short_name": "OTP \u00c9szak-keleti r., Kom\u00e1di"
+    "name": "OTP \u00c9KMR Kom\u00e1di",
+    "short_name": "OTP \u00c9KMR Kom\u00e1di"
   },
   {
     "country_code": "HU",
@@ -12868,8 +12900,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11738235",
-    "name": "OTP \u00c9szak-keleti r., Debrecen",
-    "short_name": "OTP \u00c9szak-keleti r., Debrecen"
+    "name": "OTP \u00c9KMR Debrecen",
+    "short_name": "OTP \u00c9KMR Debrecen"
   },
   {
     "country_code": "HU",
@@ -13196,8 +13228,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11741062",
-    "name": "OTP \u00c9szak-keleti r., Sz\u00e9cs\u00e9ny",
-    "short_name": "OTP \u00c9szak-keleti r., Sz\u00e9cs\u00e9ny"
+    "name": "OTP \u00c9KR, Sz\u00e9cs\u00e9ny",
+    "short_name": "OTP \u00c9KR, Sz\u00e9cs\u00e9ny"
   },
   {
     "country_code": "HU",
@@ -13316,8 +13348,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11742142",
-    "name": "OTP Budapesti r., Abony",
-    "short_name": "OTP Budapesti r., Abony"
+    "name": "OTP Budapesti r. Cegl\u00e9d",
+    "short_name": "OTP Budapesti r. Cegl\u00e9d"
   },
   {
     "country_code": "HU",
@@ -13380,8 +13412,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11742221",
-    "name": "OTP Budapesti r., \u00d3csa",
-    "short_name": "OTP Budapesti r., \u00d3csa"
+    "name": "OTP Budapesti r., Dabas",
+    "short_name": "OTP Budapesti r., Dabas"
   },
   {
     "country_code": "HU",
@@ -13596,8 +13628,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11743019",
-    "name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Kaposv\u00e1r Szolg.h\u00e1z",
-    "short_name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Kaposv\u00e1r Szolg.h\u00e1z"
+    "name": "OTP DDR Kaposv\u00e1r",
+    "short_name": "OTP DDR Kaposv\u00e1r"
   },
   {
     "country_code": "HU",
@@ -13660,8 +13692,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11743105",
-    "name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Lengyelt\u00f3ti",
-    "short_name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Lengyelt\u00f3ti"
+    "name": "OTP DDR, Lengyelt\u00f3ti",
+    "short_name": "OTP DDR, Lengyelt\u00f3ti"
   },
   {
     "country_code": "HU",
@@ -13692,8 +13724,16 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11743150",
-    "name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Balatonlelle",
-    "short_name": "OTP D\u00e9l-dun\u00e1nt\u00fali r., Balatonlelle"
+    "name": "OTP DDR, Balatonlelle",
+    "short_name": "OTP DDR, Balatonlelle"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11743167",
+    "name": "OTP DDR Kaposv\u00e1r Partner Centrum",
+    "short_name": "OTP DDR Kaposv\u00e1r Partner Centrum"
   },
   {
     "country_code": "HU",
@@ -13764,8 +13804,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11744089",
-    "name": "OTP \u00c9szak-keleti r., Balk\u00e1ny",
-    "short_name": "OTP \u00c9szak-keleti r., Balk\u00e1ny"
+    "name": "OTP \u00c9szak-keleti r., Nagyk\u00e1ll\u00f3",
+    "short_name": "OTP \u00c9szak-keleti r., Nagyk\u00e1ll\u00f3"
   },
   {
     "country_code": "HU",
@@ -13780,8 +13820,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11744106",
-    "name": "OTP \u00c9szak-keleti r., Dombr\u00e1d",
-    "short_name": "OTP \u00c9szak-keleti r., Dombr\u00e1d"
+    "name": "OTP \u00c9KR Kisv\u00e1rda",
+    "short_name": "OTP \u00c9KR Kisv\u00e1rda"
   },
   {
     "country_code": "HU",
@@ -13804,8 +13844,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11744137",
-    "name": "OTP \u00c9szak-keleti r., Tiszal\u00f6k",
-    "short_name": "OTP \u00c9szak-keleti r., Tiszal\u00f6k"
+    "name": "OTP \u00c9KR Tiszal\u00f6k",
+    "short_name": "OTP \u00c9KR Tiszal\u00f6k"
   },
   {
     "country_code": "HU",
@@ -13980,8 +14020,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11745152",
-    "name": "OTP D\u00e9l-alf\u00f6ldi r., Kunmadaras",
-    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Kunmadaras"
+    "name": "OTP D\u00e9l-alf\u00f6ldi r., Karcag",
+    "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Karcag"
   },
   {
     "country_code": "HU",
@@ -14006,6 +14046,14 @@
     "bank_code": "11745183",
     "name": "OTP D\u00e9l-alf\u00f6ldi r., Szolnok-Sz\u00e9chenyi",
     "short_name": "OTP D\u00e9l-alf\u00f6ldi r., Szolnok-Sz\u00e9chenyi"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11745217",
+    "name": "OTP DAR Szolnok Partner Centrum",
+    "short_name": "OTP DAR Szolnok Partner Centrum"
   },
   {
     "country_code": "HU",
@@ -14276,8 +14324,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "11748090",
-    "name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Devecser",
-    "short_name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Devecser"
+    "name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Ajka",
+    "short_name": "OTP \u00c9szak-dun\u00e1nt\u00fali r., Ajka"
   },
   {
     "country_code": "HU",
@@ -15899,6 +15947,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
+    "bank_code": "11773504",
+    "name": "OTP IDC Sz\u00e1mlavezet\u00e9s",
+    "short_name": "OTP IDC Sz\u00e1mlavezet\u00e9s"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
     "bank_code": "11773535",
     "name": "OTP Fej\u00e9r megyei LAFO fi\u00f3k",
     "short_name": "OTP Fej\u00e9r megyei LAFO fi\u00f3k"
@@ -16646,6 +16702,30 @@
     "bank_code": "11775496",
     "name": "OTP Zala megyei Lakoss\u00e1gi Deviza",
     "short_name": "OTP Zala megyei Lakoss\u00e1gi Deviza"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11775506",
+    "name": "OTP Lakoss\u00e1gi deviza",
+    "short_name": "OTP Lakoss\u00e1gi deviza"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11775513",
+    "name": "OTP Lakoss\u00e1gi deviza",
+    "short_name": "OTP Lakoss\u00e1gi deviza"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11775520",
+    "name": "OTP Lakoss\u00e1gi deviza",
+    "short_name": "OTP Lakoss\u00e1gi deviza"
   },
   {
     "country_code": "HU",
@@ -17531,6 +17611,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
+    "bank_code": "11790059",
+    "name": "OTP  Technikai Fi\u00f3k LMS sz\u00e1ml\u00e1khoz",
+    "short_name": "OTP  Technikai Fi\u00f3k LMS sz\u00e1ml\u00e1khoz"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
     "bank_code": "11791005",
     "name": "OTP Bankk\u00e1rtya Fejl. \u00c9s \u00dczem. O.",
     "short_name": "OTP Bankk\u00e1rtya Fejl. \u00c9s \u00dczem. O."
@@ -17590,6 +17678,14 @@
     "bank_code": "11794046",
     "name": "OTP EU V\u00e1llalati Tan\u00e1csad\u00e1s",
     "short_name": "OTP EU V\u00e1llalati Tan\u00e1csad\u00e1s"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11794101",
+    "name": "OTP BPR,Bank-\u00e9s P\u00e9nz\u00fcgyi Int. Kapcs. O.",
+    "short_name": "OTP BPR,Bank-\u00e9s P\u00e9nz\u00fcgyi Int. Kapcs. O."
   },
   {
     "country_code": "HU",
@@ -17763,9 +17859,33 @@
     "country_code": "HU",
     "primary": true,
     "bic": "OTPVHUHB",
+    "bank_code": "11799728",
+    "name": "OTP Azonnali k\u00f6lcs\u00f6n-internet (DSP)",
+    "short_name": "OTP Azonnali k\u00f6lcs\u00f6n-internet (DSP)"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11799735",
+    "name": "OTP SZ\u00c9P K\u00e1rtya Technikai Fi\u00f3k",
+    "short_name": "OTP SZ\u00c9P K\u00e1rtya Technikai Fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
     "bank_code": "11799962",
     "name": "OTP Elektronikus Banki Igazgat\u00f3s\u00e1g",
     "short_name": "OTP Elektronikus Banki Igazgat\u00f3s\u00e1g"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "OTPVHUHB",
+    "bank_code": "11799979",
+    "name": "OTP Omnichannel Tribe",
+    "short_name": "OTP Omnichannel Tribe"
   },
   {
     "country_code": "HU",
@@ -19091,6 +19211,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "UBRTHUHB",
+    "bank_code": "12027019",
+    "name": "Salespoint Cegl\u00e9d",
+    "short_name": "Salespoint Cegl\u00e9d"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "UBRTHUHB",
     "bank_code": "12028003",
     "name": "Raiffeisen Bank Zrt. Tatab\u00e1nya I.",
     "short_name": "Raiffeisen Bank Zrt. Tatab\u00e1nya I."
@@ -19110,6 +19238,14 @@
     "bank_code": "12028209",
     "name": "Raiffeisen Bank Zrt. Tatab\u00e1nya II.",
     "short_name": "Raiffeisen Bank Zrt. Tatab\u00e1nya II."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "UBRTHUHB",
+    "bank_code": "12028302",
+    "name": "Raiffeisen Bank Zrt. Tatab\u00e1nya III.",
+    "short_name": "Raiffeisen Bank Zrt. Tatab\u00e1nya III."
   },
   {
     "country_code": "HU",
@@ -19940,32 +20076,32 @@
     "primary": true,
     "bic": "GNBAHUHB",
     "bank_code": "12100004",
-    "name": "Gr\u00e1nit Bank Zrt.",
-    "short_name": "Gr\u00e1nit Bank Zrt."
+    "name": "Gr\u00e1nit Bank Nyrt.",
+    "short_name": "Gr\u00e1nit Bank Nyrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "GNBAHUHB",
     "bank_code": "12100011",
-    "name": "Gr\u00e1nit Bank Zrt.",
-    "short_name": "Gr\u00e1nit Bank Zrt."
+    "name": "Gr\u00e1nit Bank Nyrt.",
+    "short_name": "Gr\u00e1nit Bank Nyrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "GNBAHUHB",
     "bank_code": "12100028",
-    "name": "Gr\u00e1nit Bank Zrt.",
-    "short_name": "Gr\u00e1nit Bank Zrt."
+    "name": "Gr\u00e1nit Bank Nyrt.",
+    "short_name": "Gr\u00e1nit Bank Nyrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "GNBAHUHB",
     "bank_code": "12100035",
-    "name": "GR\u00c1NIT Bank Zrt. WestEnd Fi\u00f3k",
-    "short_name": "GR\u00c1NIT Bank Zrt. WestEnd Fi\u00f3k"
+    "name": "Gr\u00e1nit Bank Nyrt.",
+    "short_name": "Gr\u00e1nit Bank Nyrt."
   },
   {
     "country_code": "HU",
@@ -19980,8 +20116,8 @@
     "primary": true,
     "bic": "TRWIBEBB",
     "bank_code": "12600016",
-    "name": "TransferWise Europe SA",
-    "short_name": "TransferWise Europe SA"
+    "name": "Wise Europe SA",
+    "short_name": "Wise Europe SA"
   },
   {
     "country_code": "HU",
@@ -20515,6 +20651,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "INGBHUHB",
+    "bank_code": "13700999",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
     "bank_code": "13701017",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
@@ -20603,6 +20747,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "INGBHUHB",
+    "bank_code": "13711999",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
     "bank_code": "13712017",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
@@ -20636,6 +20788,14 @@
     "primary": true,
     "bic": "INGBHUHB",
     "bank_code": "13719014",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
+    "bank_code": "13721015",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
   },
@@ -20707,6 +20867,14 @@
     "country_code": "HU",
     "primary": true,
     "bic": "INGBHUHB",
+    "bank_code": "13744016",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
     "bank_code": "13760010",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
@@ -20716,6 +20884,14 @@
     "primary": true,
     "bic": "INGBHUHB",
     "bank_code": "13777016",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
+    "bank_code": "13777999",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
   },
@@ -20788,6 +20964,14 @@
     "primary": true,
     "bic": "INGBHUHB",
     "bank_code": "13799016",
+    "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
+    "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "INGBHUHB",
+    "bank_code": "13799999",
     "name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe",
     "short_name": "ING Bank N.V. Magyarorsz\u00e1gi Fi\u00f3ktelepe"
   },
@@ -21339,6 +21523,206 @@
     "country_code": "HU",
     "primary": true,
     "bic": "HBWEHUHB",
+    "bank_code": "16201451",
+    "name": "MAGNET Bank Polg\u00e1r k\u00f6zp. fi\u00f3k",
+    "short_name": "MAGNET Bank Polg\u00e1r k\u00f6zp. fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201468",
+    "name": "MAGNET Bank Polg\u00e1ri fi\u00f3k",
+    "short_name": "MAGNET Bank Polg\u00e1ri fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201475",
+    "name": "MAGNET Bank \u00dajtikosi fi\u00f3k",
+    "short_name": "MAGNET Bank \u00dajtikosi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201482",
+    "name": "MAGNET Bank \u00dajtikosi fi\u00f3k",
+    "short_name": "MAGNET Bank \u00dajtikosi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201499",
+    "name": "MAGNET Bank Hajd\u00fan\u00e1n\u00e1si fi\u00f3k",
+    "short_name": "MAGNET Bank Hajd\u00fan\u00e1n\u00e1si fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201509",
+    "name": "MAGNET Bank Tisza\u00fajv\u00e1rosi fi\u00f3k",
+    "short_name": "MAGNET Bank Tisza\u00fajv\u00e1rosi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201516",
+    "name": "MAGNET Bank Debreceni fi\u00f3k",
+    "short_name": "MAGNET Bank Debreceni fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201523",
+    "name": "MAGNET Bank T\u00f6k\u00f6li fi\u00f3k",
+    "short_name": "MAGNET Bank T\u00f6k\u00f6li fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201530",
+    "name": "MAGNET Bank Hajd\u00fab\u00f6sz\u00f6rm\u00e9nyi fi\u00f3k",
+    "short_name": "MAGNET Bank Hajd\u00fab\u00f6sz\u00f6rm\u00e9nyi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201547",
+    "name": "MAGNET Bank Budapesti fi\u00f3k",
+    "short_name": "MAGNET Bank Budapesti fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201554",
+    "name": "MAGNET Bank G\u00f6rbeh\u00e1zai fi\u00f3k",
+    "short_name": "MAGNET Bank G\u00f6rbeh\u00e1zai fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201561",
+    "name": "MAGNET Bank Kom\u00e1dii fi\u00f3k",
+    "short_name": "MAGNET Bank Kom\u00e1dii fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201578",
+    "name": "MAGNET Bank K\u00f6r\u00f6sszak\u00e1li fi\u00f3k",
+    "short_name": "MAGNET Bank K\u00f6r\u00f6sszak\u00e1li fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201585",
+    "name": "MAGNET Bank Cs\u00f6km\u0151i fi\u00f3k",
+    "short_name": "MAGNET Bank Cs\u00f6km\u0151i fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201592",
+    "name": "MAGNET Bank Zs\u00e1kai fi\u00f3k",
+    "short_name": "MAGNET Bank Zs\u00e1kai fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201602",
+    "name": "MAGNET Bank \u00dajir\u00e1zi fi\u00f3k",
+    "short_name": "MAGNET Bank \u00dajir\u00e1zi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201619",
+    "name": "MAGNET Bank Hajd\u00fadorogi fi\u00f3k",
+    "short_name": "MAGNET Bank Hajd\u00fadorogi fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201626",
+    "name": "MAGNET Bank Tiszacsegei fi\u00f3k",
+    "short_name": "MAGNET Bank Tiszacsegei fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201633",
+    "name": "MAGNET Bank \u00dajszentmargitai fi\u00f3k",
+    "short_name": "MAGNET Bank \u00dajszentmargitai fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201640",
+    "name": "MAGNET Bank Hal\u00e1szteleki fi\u00f3k",
+    "short_name": "MAGNET Bank Hal\u00e1szteleki fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201657",
+    "name": "MAGNET Bank Szigetszentmikl\u00f3si fi\u00f3k",
+    "short_name": "MAGNET Bank Szigetszentmikl\u00f3si fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201664",
+    "name": "MAGNET Bank Ny\u00edregyh\u00e1zai fi\u00f3k",
+    "short_name": "MAGNET Bank Ny\u00edregyh\u00e1zai fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201671",
+    "name": "MAGNET Bank Miskolci fi\u00f3k",
+    "short_name": "MAGNET Bank Miskolci fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201688",
+    "name": "MAGNET Bank Egri fi\u00f3k",
+    "short_name": "MAGNET Bank Egri fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
+    "bank_code": "16201695",
+    "name": "MAGNET Bank Soproni fi\u00f3k",
+    "short_name": "MAGNET Bank Soproni fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HBWEHUHB",
     "bank_code": "16209992",
     "name": "MAGNET Bank",
     "short_name": "MAGNET Bank"
@@ -21364,56 +21748,56 @@
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16700015",
-    "name": "Magyar Cetelem Bank Zrt.",
-    "short_name": "Magyar Cetelem Bank Zrt."
+    "name": "Magyar Cofidis Bank Zrt.",
+    "short_name": "Magyar Cofidis Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16710014",
-    "name": "Magyar Cetelem Bank, Bels\u0151 gazd. Szla",
-    "short_name": "Magyar Cetelem Bank, Bels\u0151 gazd. Szla"
+    "name": "Magyar Cofidis Bank, Bels\u0151 gazd. Szla",
+    "short_name": "Magyar Cofidis Bank, Bels\u0151 gazd. Szla"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16720013",
-    "name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla Credit",
-    "short_name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla Credit"
+    "name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla Credit",
+    "short_name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla Credit"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16730012",
-    "name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla Debit",
-    "short_name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla Debit"
+    "name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla Debit",
+    "short_name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla Debit"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16740011",
-    "name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla csekkbef",
-    "short_name": "Magyar Cetelem Bank, \u00dcgyf\u00e9lszla csekkbef"
+    "name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla csekkbef",
+    "short_name": "Magyar Cofidis Bank, \u00dcgyf\u00e9lszla csekkbef"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16750010",
-    "name": "Magyar Cetelem \u00dcgyf\u00e9l bet\u00e9t sz\u00e1mla",
-    "short_name": "Magyar Cetelem \u00dcgyf\u00e9l bet\u00e9t sz\u00e1mla"
+    "name": "Magyar Cofidis \u00dcgyf\u00e9l bet\u00e9t sz\u00e1mla",
+    "short_name": "Magyar Cofidis \u00dcgyf\u00e9l bet\u00e9t sz\u00e1mla"
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "MCBHHUHB",
     "bank_code": "16760019",
-    "name": "Magyar Cetelem Bels\u0151 gazd. bet\u00e9t sz\u00e1mla",
-    "short_name": "Magyar Cetelem Bels\u0151 gazd. bet\u00e9t sz\u00e1mla"
+    "name": "Magyar Cofidis Bels\u0151 gazd. bet\u00e9t sz\u00e1mla",
+    "short_name": "Magyar Cofidis Bels\u0151 gazd. bet\u00e9t sz\u00e1mla"
   },
   {
     "country_code": "HU",
@@ -22324,8 +22708,8 @@
     "primary": true,
     "bic": "OTPVHUHB",
     "bank_code": "20080004",
-    "name": "OTP P\u00e9nzt\u00e1rszolg\u00e1ltat\u00f3 Zrt.",
-    "short_name": "OTP P\u00e9nzt\u00e1rszolg\u00e1ltat\u00f3 Zrt."
+    "name": "OTP SZ\u00c9P k\u00e1rtya",
+    "short_name": "OTP SZ\u00c9P k\u00e1rtya"
   },
   {
     "country_code": "HU",
@@ -22334,14 +22718,6 @@
     "bank_code": "22222222",
     "name": "O.F.SZ. Zrt",
     "short_name": "O.F.SZ. Zrt"
-  },
-  {
-    "country_code": "HU",
-    "primary": true,
-    "bic": "BRELROBU",
-    "bank_code": "29600001",
-    "name": "Libra Internet Bank S.A.",
-    "short_name": "Libra Internet Bank S.A."
   },
   {
     "country_code": "HU",
@@ -22364,8 +22740,72 @@
     "primary": true,
     "bic": "THZTHUHH",
     "bank_code": "29900002",
-    "name": "Trive Bank Hungary Zrt",
-    "short_name": "Trive Bank Hungary Zrt"
+    "name": "Trive Bank Europe Zrt.",
+    "short_name": "Trive Bank Europe Zrt."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "THZTHUHH",
+    "bank_code": "29900019",
+    "name": "Trive Bank Europe Zrt.",
+    "short_name": "Trive Bank Europe Zrt."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "REVOHUHB",
+    "bank_code": "30200014",
+    "name": "REVOLUT BANK UAB Magyarorsz\u00e1gi Fi\u00f3ktelep",
+    "short_name": "REVOLUT BANK UAB Magyarorsz\u00e1gi Fi\u00f3ktelep"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "BBIXHUHH",
+    "bank_code": "30400001",
+    "name": "BinX Zrt.",
+    "short_name": "BinX Zrt."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "BBIXHUHH",
+    "bank_code": "30400025",
+    "name": "BinX Zrt.",
+    "short_name": "BinX Zrt."
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "DIUALT22",
+    "bank_code": "30500008",
+    "name": "DiPocket UAB",
+    "short_name": "DiPocket UAB"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "CITFCZPP",
+    "bank_code": "30700002",
+    "name": "Citfin, sporitelni druzstvo",
+    "short_name": "Citfin, sporitelni druzstvo"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "HZMNHUHH",
+    "bank_code": "30800009",
+    "name": "HUNFedezetkezel\u0151 Zrt. K\u00f6zponti Fi\u00f3k",
+    "short_name": "HUNFedezetkezel\u0151 Zrt. K\u00f6zponti Fi\u00f3k"
+  },
+  {
+    "country_code": "HU",
+    "primary": true,
+    "bic": "SLTPISRE",
+    "bank_code": "31000006",
+    "name": "TEYA ICELAND HF.",
+    "short_name": "TEYA ICELAND HF."
   },
   {
     "country_code": "HU",
@@ -31820,8 +32260,8 @@
     "primary": true,
     "bic": "MKKBHUHB",
     "bank_code": "50462779",
-    "name": "MBH Bank Nyrt.",
-    "short_name": "MBH Bank Nyrt."
+    "name": "MBH Bank Nyrt. Debrecen Plaza",
+    "short_name": "MBH Bank Nyrt. Debrecen Plaza"
   },
   {
     "country_code": "HU",
@@ -35692,8 +36132,8 @@
     "primary": true,
     "bic": "MKKBHUHB",
     "bank_code": "50469013",
-    "name": "MBH Bank Nyrt.",
-    "short_name": "MBH Bank Nyrt."
+    "name": "MBH Bank Nyrt. Csabacenter",
+    "short_name": "MBH Bank Nyrt. Csabacenter"
   },
   {
     "country_code": "HU",
@@ -41260,272 +41700,272 @@
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600104",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600214",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600221",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600238",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600245",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600252",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600269",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600276",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600283",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600290",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600300",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600317",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600324",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600331",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600348",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600355",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600362",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600379",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600410",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600427",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600434",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600441",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600458",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600465",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600472",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600489",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600506",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600513",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600520",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600537",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600544",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600551",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600575",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",
     "primary": true,
     "bic": "DTBAHUHB",
     "bank_code": "58600582",
-    "name": "DUNA Takar\u00e9k Bank Zrt.",
-    "short_name": "DUNA Takar\u00e9k Bank Zrt."
+    "name": "MBH DUNA Bank Zrt.",
+    "short_name": "MBH DUNA Bank Zrt."
   },
   {
     "country_code": "HU",

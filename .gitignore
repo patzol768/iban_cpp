@@ -20,9 +20,6 @@ generated
 # build number (would be annoying)
 build-number.txt
 
-# tests (at least until real tests are not created)
-test/*
-
 # GitEye specific
 /.project
 

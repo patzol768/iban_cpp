@@ -1,17 +1,24 @@
 #!/usr/bin/env python
 import json
+import tempfile
 
 import pandas
+import requests
 
 
-URL = "https://www.nbb.be/doc/be/be/protocol/r_fulllist_of_codes_current.xlsx"
+URL = "https://www.nbb.be/doc/be/be/protocol/full_list_current.xlsx"
 
 
 def process():
     registry = []
     skip_names = ["NAV", "VRIJ", "NAP", "NYA", "VRIJ - LIBRE", "-"]
 
-    datas = pandas.read_excel(URL, skiprows=1, sheet_name=0, dtype=str)
+    r = requests.get(URL)
+
+    with tempfile.NamedTemporaryFile(delete_on_close=False) as fp:
+        fp.write(r.content)
+        datas = pandas.read_excel(fp.name, skiprows=1, sheet_name=0, dtype=str)
+
     datas.fillna("", inplace=True)
 
     for row in datas.itertuples(index=False):

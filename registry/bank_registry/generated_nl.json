@@ -4,8 +4,8 @@
     "primary": true,
     "bic": "ABNANL2A",
     "bank_code": "ABNA",
-    "name": "ABN AMRO BANK",
-    "short_name": "ABN AMRO BANK"
+    "name": "ABN AMRO BANK N.V.",
+    "short_name": "ABN AMRO BANK N.V."
   },
   {
     "country_code": "NL",
@@ -172,8 +172,8 @@
     "primary": true,
     "bic": "BOFSNL21002",
     "bank_code": "BOFS",
-    "name": "BANK OF SCOTLAND, AMSTERDAM",
-    "short_name": "BANK OF SCOTLAND, AMSTERDAM"
+    "name": "BANK OF SCOTLAND, Amsterdam",
+    "short_name": "BANK OF SCOTLAND, Amsterdam"
   },
   {
     "country_code": "NL",
@@ -186,10 +186,42 @@
   {
     "country_code": "NL",
     "primary": true,
+    "bic": "BUKKNL22",
+    "bank_code": "BUKK",
+    "name": "BUCKAROO B.V.",
+    "short_name": "BUCKAROO B.V."
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
     "bic": "BUNQNL2A",
     "bank_code": "BUNQ",
     "name": "BUNQ",
     "short_name": "BUNQ"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "BUUTNL2A",
+    "bank_code": "BUUT",
+    "name": "ABN AMRO BANK N.V.",
+    "short_name": "ABN AMRO BANK N.V."
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "CCBVNL2A",
+    "bank_code": "CCBV",
+    "name": "CURRENCYCLOUD B.V.",
+    "short_name": "CURRENCYCLOUD B.V."
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "CEPANL2A",
+    "bank_code": "CEPA",
+    "name": "CAISSE D'EPARGNE, Netherlands",
+    "short_name": "CAISSE D'EPARGNE, Netherlands"
   },
   {
     "country_code": "NL",
@@ -218,6 +250,14 @@
   {
     "country_code": "NL",
     "primary": true,
+    "bic": "CLRBNL2A",
+    "bank_code": "CLRB",
+    "name": "CLEARBANK EUROPE N.V.",
+    "short_name": "CLEARBANK EUROPE N.V."
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
     "bic": "COBANL2X",
     "bank_code": "COBA",
     "name": "COMMERZBANK",
@@ -226,18 +266,10 @@
   {
     "country_code": "NL",
     "primary": true,
-    "bic": "CCBVNL2A",
-    "bank_code": "CCBV",
-    "name": "CURRENCYCLOUD B.V.",
-    "short_name": "CURRENCYCLOUD B.V."
-  },
-  {
-    "country_code": "NL",
-    "primary": true,
     "bic": "DELENL22",
     "bank_code": "DELE",
-    "name": "OYENS & VAN EEGHEN - part of Delen Private Bank",
-    "short_name": "OYENS & VAN EEGHEN - part of Delen Private Bank"
+    "name": "Delen Private Bank Nederland",
+    "short_name": "Delen Private Bank Nederland"
   },
   {
     "country_code": "NL",
@@ -254,14 +286,6 @@
     "bank_code": "DHBN",
     "name": "DEMIR-HALK BANK",
     "short_name": "DEMIR-HALK BANK"
-  },
-  {
-    "country_code": "NL",
-    "primary": true,
-    "bic": "DLBKNL2A",
-    "bank_code": "DLBK",
-    "name": "DELTA LLOYD BANK",
-    "short_name": "DELTA LLOYD BANK"
   },
   {
     "country_code": "NL",
@@ -292,8 +316,8 @@
     "primary": true,
     "bic": "FBHLNL2A",
     "bank_code": "FBHL",
-    "name": "CREDIT EUROPE BANK",
-    "short_name": "CREDIT EUROPE BANK"
+    "name": "NEXENT BANK N.V.",
+    "short_name": "NEXENT BANK N.V."
   },
   {
     "country_code": "NL",
@@ -354,18 +378,18 @@
   {
     "country_code": "NL",
     "primary": true,
-    "bic": "HANDNL2A",
-    "bank_code": "HAND",
-    "name": "SVENSKA HANDELSBANKEN",
-    "short_name": "SVENSKA HANDELSBANKEN"
+    "bic": "GOLDNL2A",
+    "bank_code": "GOLD",
+    "name": "GOLDMAN SACHS BANK EUROPE SE, AMSTERDAM BRANCH",
+    "short_name": "GOLDMAN SACHS BANK EUROPE SE, AMSTERDAM BRANCH"
   },
   {
     "country_code": "NL",
     "primary": true,
-    "bic": "HHBANL22",
-    "bank_code": "HHBA",
-    "name": "HOF HOORNEMAN BANKIERS",
-    "short_name": "HOF HOORNEMAN BANKIERS"
+    "bic": "HANDNL2A",
+    "bank_code": "HAND",
+    "name": "SVENSKA HANDELSBANKEN",
+    "short_name": "SVENSKA HANDELSBANKEN"
   },
   {
     "country_code": "NL",
@@ -498,6 +522,14 @@
   {
     "country_code": "NL",
     "primary": true,
+    "bic": "MLLENL2A",
+    "bank_code": "MLLE",
+    "name": "MOLLIE B.V.",
+    "short_name": "MOLLIE B.V."
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
     "bic": "MODRNL22",
     "bank_code": "MODR",
     "name": "MODULR FINANCE B.V.",
@@ -532,8 +564,8 @@
     "primary": true,
     "bic": "PCBCNL2A",
     "bank_code": "PCBC",
-    "name": "CHINA CONSTRUCTION BANK, AMSTERDAM BRANCH",
-    "short_name": "CHINA CONSTRUCTION BANK, AMSTERDAM BRANCH"
+    "name": "CHINA CONSTRUCTION BANK, Amsterdam Branch",
+    "short_name": "CHINA CONSTRUCTION BANK, Amsterdam Branch"
   },
   {
     "country_code": "NL",
@@ -542,6 +574,22 @@
     "bank_code": "PNOW",
     "name": "PAY NOW",
     "short_name": "PAY NOW"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "PYNLNL22",
+    "bank_code": "PYNL",
+    "name": "PAY.NL",
+    "short_name": "PAY.NL"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "QNTONL22",
+    "bank_code": "QNTO",
+    "name": "QONTO",
+    "short_name": "QONTO"
   },
   {
     "country_code": "NL",
@@ -580,8 +628,8 @@
     "primary": true,
     "bic": "SNSBNL2A",
     "bank_code": "SNSB",
-    "name": "SNS",
-    "short_name": "SNS"
+    "name": "ASN BANK",
+    "short_name": "ASN BANK"
   },
   {
     "country_code": "NL",
@@ -598,6 +646,14 @@
     "bank_code": "SWNB",
     "name": "SWAN",
     "short_name": "SWAN"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "TRBKNL2A",
+    "bank_code": "TRBK",
+    "name": "TRADE REPUBLIC BANK GmbH, Netherlands Branch",
+    "short_name": "TRADE REPUBLIC BANK GmbH, Netherlands Branch"
   },
   {
     "country_code": "NL",
@@ -626,18 +682,26 @@
   {
     "country_code": "NL",
     "primary": true,
-    "bic": "VPAYNL22",
-    "bank_code": "VPAY",
-    "name": "VIVA PAYMENT SERVICES S.A.",
-    "short_name": "VIVA PAYMENT SERVICES S.A."
-  },
-  {
-    "country_code": "NL",
-    "primary": true,
     "bic": "VTPSNL2R",
     "bank_code": "VTPS",
     "name": "VITESSE PSP",
     "short_name": "VITESSE PSP"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "VVIDNL22",
+    "bank_code": "VVID",
+    "name": "VIVID MONEY SA, Netherlands Branch",
+    "short_name": "VIVID MONEY SA, Netherlands Branch"
+  },
+  {
+    "country_code": "NL",
+    "primary": true,
+    "bic": "WOFTNL22",
+    "bank_code": "WOFT",
+    "name": "World First Netherlands B.V.",
+    "short_name": "World First Netherlands B.V."
   },
   {
     "country_code": "NL",
@@ -652,15 +716,15 @@
     "primary": true,
     "bic": "ZWLBNL21",
     "bank_code": "ZWLB",
-    "name": "SNS ( ex ZWITSERLEVENBANK)",
-    "short_name": "SNS ( ex ZWITSERLEVENBANK)"
+    "name": "VOLKSBANK N.V. ( ex ZWITSERLEVENBANK)",
+    "short_name": "VOLKSBANK N.V. ( ex ZWITSERLEVENBANK)"
   },
   {
     "country_code": "NL",
     "primary": true,
     "bic": "BCDMNL22",
     "bank_code": "BCDM",
-    "name": "BANQUE CHAABI DU MAROC * (tijdelijk) inactief sinds 31 december 2020 *",
-    "short_name": "BANQUE CHAABI DU MAROC * (tijdelijk) inactief sinds 31 december 2020 *"
+    "name": "BANQUE CHAABI DU MAROC * inactief sinds 31 december 2020 *",
+    "short_name": "BANQUE CHAABI DU MAROC * inactief sinds 31 december 2020 *"
   }
 ]

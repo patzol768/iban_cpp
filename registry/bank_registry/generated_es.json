@@ -306,10 +306,10 @@
   {
     "country_code": "ES",
     "primary": true,
-    "bank_code": "2105",
-    "bic": "CECAESMM105",
+    "bank_code": "0115",
+    "bic": "",
     "name": "BANCO DE CASTILLA-LA MANCHA, S.A.",
-    "short_name": "BANCO DE CASTIL"
+    "short_name": "BANCO CLM"
   },
   {
     "country_code": "ES",
@@ -1730,10 +1730,10 @@
   {
     "country_code": "ES",
     "primary": true,
-    "bank_code": "1477",
-    "bic": "",
+    "bank_code": "0156",
+    "bic": "ABNAESMM",
     "name": "THE ROYAL BANK OF SCOTLAND PLC, S.E.",
-    "short_name": "R. B. SCOTLAND"
+    "short_name": "ROYAL BANK"
   },
   {
     "country_code": "ES",
@@ -3378,14 +3378,6 @@
   {
     "country_code": "ES",
     "primary": true,
-    "bank_code": "3183",
-    "bic": "CASDESBB",
-    "name": "CAJA DE ARQUITECTOS S.C.C.",
-    "short_name": "ARQUIA"
-  },
-  {
-    "country_code": "ES",
-    "primary": true,
     "bank_code": "3184",
     "bic": "",
     "name": "CAJA DE CREDITO DE ALCOY, C.C.V. (EN LIQUIDACION)",
@@ -3569,11 +3561,7 @@
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2059",
-    "bic": "BBVAESMM",
-    "name": "CAIXA D'ESTALVIS DE SABADELL",
-    "short_name": "CAIXA SABADELL"
+    "primary": true
   },
   {
     "country_code": "ES",
@@ -3681,19 +3669,11 @@
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2073",
-    "bic": "BBVAESMM",
-    "name": "CAIXA D'ESTALVIS DE TARRAGONA",
-    "short_name": "CAIXA TARRAGONA"
+    "primary": true
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2074",
-    "bic": "BBVAESMM",
-    "name": "CAIXA D'ESTALVIS DE TERRASSA",
-    "short_name": "CAIXA TERRASSA"
+    "primary": true
   },
   {
     "country_code": "ES",
@@ -4441,11 +4421,7 @@
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2030",
-    "bic": "CAIXESBB",
-    "name": "CAIXA D'ESTALVIS DE GIRONA",
-    "short_name": "CAIXAGIRONA"
+    "primary": true
   },
   {
     "country_code": "ES",
@@ -4513,19 +4489,11 @@
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2040",
-    "bic": "BBVAESMM",
-    "name": "CAIXA D'ESTALVIS COMARCAL DE MANLLEU",
-    "short_name": "CAIXA MANLLEU"
+    "primary": true
   },
   {
     "country_code": "ES",
-    "primary": true,
-    "bank_code": "2041",
-    "bic": "BBVAESMM",
-    "name": "CAIXA D'ESTALVIS DE MANRESA",
-    "short_name": "CAIXA MANRESA"
+    "primary": true
   },
   {
     "country_code": "ES",

@@ -5,7 +5,7 @@ import pandas
 import requests
 
 
-URL = "https://www.bank.lv/images/stories/pielikumi/makssist/bic_saraksts_22.01.2020_eng.xls"
+URL = "https://www.bank.lv/images/stories/pielikumi/makssist/BIC_IBAN/bic_saraksts_2025.xls"
 
 
 def process():

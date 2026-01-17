@@ -300,7 +300,7 @@
     }
   },
   "CZ": {
-    "bban_spec": "4!n6!n10!n",
+    "bban_spec": "4!n16!n",
     "iban_spec": "CZ2!n4!n6!n10!n",
     "bban_length": 20,
     "iban_length": 24,
@@ -400,8 +400,8 @@
     }
   },
   "EE": {
-    "bban_spec": "2!n2!n11!n1!n",
-    "iban_spec": "EE2!n2!n2!n11!n1!n",
+    "bban_spec": "2!n14!n",
+    "iban_spec": "EE2!n2!n14!n",
     "bban_length": 16,
     "iban_length": 20,
     "positions": {
@@ -979,6 +979,26 @@
       ]
     }
   },
+  "HN": {
+    "bban_spec": "4!a20!n",
+    "iban_spec": "HN2!n4!a20!n",
+    "bban_length": 24,
+    "iban_length": 28,
+    "positions": {
+      "account_code": [
+        4,
+        24
+      ],
+      "bank_code": [
+        0,
+        4
+      ],
+      "branch_code": [
+        4,
+        4
+      ]
+    }
+  },
   "HR": {
     "bban_spec": "7!n10!n",
     "iban_spec": "HR2!n7!n10!n",
@@ -1130,8 +1150,8 @@
         26
       ],
       "bank_code": [
-        4,
-        8
+        0,
+        4
       ],
       "branch_code": [
         4,
@@ -1539,6 +1559,26 @@
       ]
     }
   },
+  "OM": {
+    "bban_spec": "3!n16!c",
+    "iban_spec": "OM2!n3!n16!c",
+    "bban_length": 19,
+    "iban_length": 23,
+    "positions": {
+      "account_code": [
+        3,
+        19
+      ],
+      "bank_code": [
+        0,
+        3
+      ],
+      "branch_code": [
+        3,
+        3
+      ]
+    }
+  },
   "PK": {
     "bban_spec": "4!a16!c",
     "iban_spec": "PK2!n4!a16!c",
@@ -1571,10 +1611,10 @@
       ],
       "bank_code": [
         0,
-        0
+        8
       ],
       "branch_code": [
-        0,
+        8,
         8
       ]
     }
@@ -2036,6 +2076,26 @@
       "branch_code": [
         2,
         4
+      ]
+    }
+  },
+  "YE": {
+    "bban_spec": "4!a4!n18!c",
+    "iban_spec": "YE2!n4!a4!n18!c",
+    "bban_length": 26,
+    "iban_length": 30,
+    "positions": {
+      "account_code": [
+        8,
+        26
+      ],
+      "bank_code": [
+        0,
+        4
+      ],
+      "branch_code": [
+        4,
+        8
       ]
     }
   }

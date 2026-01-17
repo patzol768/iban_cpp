@@ -50,14 +50,6 @@
   {
     "country_code": "HR",
     "primary": true,
-    "bic": "HKBOHR2X",
-    "bank_code": "2493003",
-    "name": "HRVATSKA BANKA ZA OBNOVU I RAZVITAK Zagreb",
-    "short_name": "HRVATSKA BANKA ZA OBNOVU I RAZVITAK Zagreb"
-  },
-  {
-    "country_code": "HR",
-    "primary": true,
     "bic": "NBHRHR2X",
     "bank_code": "1001005",
     "name": "HRVATSKA NARODNA BANKA",
@@ -158,14 +150,6 @@
     "bank_code": "2403009",
     "name": "SAMOBORSKA BANKA d.d. Samobor",
     "short_name": "SAMOBORSKA BANKA d.d. Samobor"
-  },
-  {
-    "country_code": "HR",
-    "primary": true,
-    "bic": "VBCRHR22",
-    "bank_code": "2503007",
-    "name": "NOVA HRVATSKA BANKA d.d., Zagreb",
-    "short_name": "NOVA HRVATSKA BANKA d.d., Zagreb"
   },
   {
     "country_code": "HR",
