@@ -10,6 +10,7 @@
 #include "iban/country.h"
 #include "iban/error.h"
 
+#include <algorithm>
 #include <memory>
 
 using std::function;
